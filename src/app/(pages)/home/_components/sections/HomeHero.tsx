@@ -43,7 +43,7 @@ export const HomeHero = (props: IProps) => {
           </p>
           <RrssList className="mt-6 lg:justify-start" />
           <ButtonPrimary
-            href="/docs/cvcochachi.pdf"
+            href="/docs/cvcochachi2024.pdf"
             text="DESCARGA MI CV"
             target="_blank"
             className="mt-6"

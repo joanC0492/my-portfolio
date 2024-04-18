@@ -32,37 +32,59 @@ export const dataSkills: IDataSkills[] = [
   },
   {
     id: 3,
-    title: "FIGMA",
-    percentage: 50,
-  },
-  {
-    id: 4,
     title: "JAVASCRIPT",
     percentage: 75,
   },
   {
+    id: 4,
+    title: "REACTJS",
+    percentage: 75,
+  },
+  {
     id: 5,
+    title: "TAILWIND",
+    percentage: 75,
+  },
+  {
+    id: 6,
+    title: "NODEJS",
+    percentage: 65,
+  },
+  {
+    id: 7,
     title: "GIT",
     percentage: 65,
   },
   {
-    id: 6,
-    title: "PHP",
-    percentage: 60,
-  },
-  {
-    id: 7,
+    id: 8,
     title: "WORDPRESS/CMS",
     percentage: 60,
   },
   {
-    id: 8,
+    id: 9,
+    title: "MONGODB",
+    percentage: 60,
+  },
+  {
+    id: 10,
     title: "MYSQL",
     percentage: 60,
   },
 ];
 
 export const dataResumes: IResume[] = [
+  {
+    id: 0,
+    position: "Frontend Developer",
+    company: "FREELANCE",
+    period: "(05/2022 - Actualmente)",
+    experienceList: [
+      `Mantenimiento y creación de Proyectos web con
+      reactjs`,
+      `Intervenciones de ladings page`,
+      `Desarrollo de aplicaciones internas para el BCP`,
+    ],
+  },
   {
     id: 1,
     position: "CRO UX Analyst & Fullstack Developer",
