@@ -12,11 +12,11 @@ export const dataRrss: IDataRrss[] = [
     Icon: FaGithub,
     url: "https://github.com/joanC0492",
   },
-  {
-    id: 3,
-    Icon: FaWhatsapp,
-    url: "https://wa.me/+51900556665?text=Hola%20te%20contacto%20desde%20joancochachi.com",
-  },
+  // {
+  //   id: 3,
+  //   Icon: FaWhatsapp,
+  //   url: "https://wa.me/+51900556665?text=Hola%20te%20contacto%20desde%20joancochachi.com",
+  // },
 ];
 
 export const dataSkills: IDataSkills[] = [

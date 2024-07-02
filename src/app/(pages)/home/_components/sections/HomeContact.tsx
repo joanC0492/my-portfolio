@@ -22,7 +22,7 @@ export const HomeContact = (props: IProps) => {
             </p>
             <p>Conéctese conmigo a través de los siguientes medios.</p>
             <ul className="mt-4 text-left inline-block">
-              <li>
+              {/* <li>
                 <span className="mr-2">Celular:</span>
                 <a
                   href="tel:51900556665"
@@ -31,7 +31,7 @@ export const HomeContact = (props: IProps) => {
                 >
                   +51 900556665
                 </a>
-              </li>
+              </li> */}
               <li className="mt-0.5">
                 <span className="mr-2">Correo:</span>
                 <a
