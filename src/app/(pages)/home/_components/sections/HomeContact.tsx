@@ -21,8 +21,8 @@ export const HomeContact = (props: IProps) => {
               Estoy disponible para el trabajo independiente.
             </p>
             <p>Conéctese conmigo a través de los siguientes medios.</p>
-            <ul className="mt-4 text-left inline-block">
-              {/* <li>
+            {/* <ul className="mt-4 text-left inline-block">
+              <li>
                 <span className="mr-2">Celular:</span>
                 <a
                   href="tel:51900556665"
@@ -31,7 +31,7 @@ export const HomeContact = (props: IProps) => {
                 >
                   +51 900556665
                 </a>
-              </li> */}
+              </li>
               <li className="mt-0.5">
                 <span className="mr-2">Correo:</span>
                 <a
@@ -42,7 +42,10 @@ export const HomeContact = (props: IProps) => {
                   joan0492@gmail.com
                 </a>
               </li>
-            </ul>
+            </ul> */}
+            <div className="max-w-screen-sm mx-auto">
+              <hr className="my-5 opacity-20" />
+            </div>
             <RrssList className="mt-5" />
           </div>
         </div>

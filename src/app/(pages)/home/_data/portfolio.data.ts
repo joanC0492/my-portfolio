@@ -1,7 +1,14 @@
 import { IDataProjects, IDataRrss, IDataSkills, IResume } from "../_domain";
 import { FaLinkedinIn, FaGithub, FaWhatsapp } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { MdOutlineEmail } from "react-icons/md";
 
 export const dataRrss: IDataRrss[] = [
+  {
+    id: 0,
+    Icon: MdEmail,
+    url: "mailto:joan0492@gmail.com",
+  },
   {
     id: 1,
     Icon: FaLinkedinIn,
@@ -12,6 +19,7 @@ export const dataRrss: IDataRrss[] = [
     Icon: FaGithub,
     url: "https://github.com/joanC0492",
   },
+
   // {
   //   id: 3,
   //   Icon: FaWhatsapp,
