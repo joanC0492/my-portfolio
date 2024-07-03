@@ -23,7 +23,7 @@ export const dataSkills: IDataSkills[] = [
   {
     id: 1,
     title: "HTML & CSS",
-    percentage: 90,
+    percentage: 75,
   },
   {
     id: 2,
@@ -48,27 +48,27 @@ export const dataSkills: IDataSkills[] = [
   {
     id: 6,
     title: "NODEJS",
-    percentage: 65,
+    percentage: 75,
   },
   {
     id: 7,
     title: "GIT",
-    percentage: 65,
+    percentage: 75,
   },
   {
     id: 8,
     title: "WORDPRESS/CMS",
-    percentage: 60,
+    percentage: 75,
   },
   {
     id: 9,
     title: "MONGODB",
-    percentage: 60,
+    percentage: 75,
   },
   {
     id: 10,
     title: "MYSQL",
-    percentage: 60,
+    percentage: 75,
   },
 ];
 

@@ -39,8 +39,8 @@ export const HomeAbout = (props: IProps) => {
               className={cn(
                 "w-full px-4 mx-auto text-left",
                 "md:px-8",
-                "lg:pl-4 lg:pr-0 lg:col-span-8",
-                "2xl:col-span-6"
+                "lg:pl-4 lg:pr-0 lg:col-span-6",
+                "2xl:col-span-4"
               )}
             >
               <Title
@@ -48,12 +48,7 @@ export const HomeAbout = (props: IProps) => {
                 variant="h3"
                 className="mt-4 text-[26px] text-jc-dark-4"
               />
-              <Skills
-                className={cn(
-                  "mt-5",
-                  "lg:mt-0 lg:grid lg:grid-cols-2 lg:items-center lg:gap-3"
-                )}
-              />
+              <Skills className={cn("mt-5", "flex flex-wrap")} />
             </div>
           </div>
         </div>
