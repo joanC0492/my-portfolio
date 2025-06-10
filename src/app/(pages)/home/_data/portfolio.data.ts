@@ -87,14 +87,28 @@ export const dataResumes: IResume[] = [
     company: "FREELANCE",
     period: "(05/2022 - Actualmente)",
     experienceList: [
-      `Mantenimiento y creación de Proyectos web con
-      reactjs`,
-      `Intervenciones de ladings page`,
-      `Desarrollo de aplicaciones internas para el BCP`,
+      `Desarrollo de landing pages en HubSpot CMS.`,
+      `Sitio web para cirujano con WordPress y Elementor.`,
+      `Personalización de WP-Rentals en proyecto wordpress, implementando: WooCommerce, Mercado Pago y mapas.`,
+      `Mailings responsivos para BCP (Outlook Desktop compatible).`,
+      `Desarrollo y mantenimiento de proyectos en ReactJS.`,
     ],
   },
   {
     id: 1,
+    position: "Desarrollador WordPress",
+    company: "AMAZON ARGUZ S.A.C.",
+    period: "(Julio 2024 - Marzo 2025)",
+    experienceList: [
+      `Desarrollo de sitios WordPress personalizados con temas hijos, Elementor y DIVI, optimizados para móviles.`,
+      `Integración de pagos con Culqi y Mercado Pago, y personalización de tiendas con WooCommerce.`,
+      `Programación de funciones a medida con PHP, shortcodes y hooks nativos.`,
+      `Optimización de velocidad y SEO técnico (caché, lazy load, estructura de encabezados).`,
+      `Implementación de sistemas educativos y de gamificación con LearnPress y GamiPress.`,
+    ],
+  },
+  {
+    id: 2,
     position: "CRO UX Analyst & Fullstack Developer",
     company: "HAVAS+ SAC",
     period: "(08/2021 - 04/2022)",
@@ -110,7 +124,7 @@ export const dataResumes: IResume[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     position: "Frontend Developer",
     company: "SRBURNS PERÚ",
     period: "(01/2021 - 07/2021)",
@@ -122,7 +136,7 @@ export const dataResumes: IResume[] = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     position: "Web Developer",
     company: "IDEAS LATAM SAC",
     period: "(09/2020 - 01/2021)",
@@ -133,7 +147,7 @@ export const dataResumes: IResume[] = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     position: "Frontend Developer",
     company: "MEDIA IMPACT",
     period: "(2018 - 2020)",
@@ -146,44 +160,65 @@ export const dataResumes: IResume[] = [
   },
 ];
 
-export const dataProjects: IDataProjects[] = [
+export const dataProjects: IDataProjects[] = [  
   {
     id: 0,
+    company: "Dr. Manuel Eduardo Flores Vilchez",
+    stack: "WORDPRESS | HTML | CSS | JS",
+    img: "/images/portfolio/projects/project-dreduardoflorescirugia.webp",
+    link: "https://joancochachi.online/dr-manuel-eduardo-flores-vilchez/",
+  },
+  {
+    id: 1,
+    company: "Spaciuz",
+    stack: "WORDPRESS | HTML | CSS | JS",
+    img: "/images/portfolio/projects/project-spaciuz.webp",
+    link: "https://joancochachi.online/spaciuz/",
+  },
+  {
+    id: 2,
+    company: "Colectivo23",
+    stack: "HTML | CSS | JS | HubSpot CMS",
+    img: "/images/portfolio/projects/project-the-unconference.webp",
+    link: "https://joancochachi.online/the-unconference-23/",
+  },
+  {
+    id: 3,
     company: "Movistar",
     stack: "HTML | CSS | JS | GA | OPTIMIZE | GTM",
     img: "/images/portfolio/projects/project-movistar.webp",
     link: "https://www.movistar.com.pe/",
   },
   {
-    id: 1,
+    id: 4,
     company: "Entel Empresas",
     stack: "WORDPRESS | HTML | PUG | CSS | SCSS | JS",
     img: "/images/portfolio/projects/project-entel-empresas.webp",
     link: "https://www.entel.pe/empresas/",
   },
   {
-    id: 2,
+    id: 5,
     company: "Innovación Digital",
     stack: "WORDPRESS | HTML | CSS | JS",
     img: "/images/portfolio/projects/project-innovacion-digital.webp",
     link: "https://innovaciondigital.biz/",
   },
   {
-    id: 3,
+    id: 6,
     company: "Exsa",
     stack: "LARAVEL | HTML | CSS | JS",
     img: "/images/portfolio/projects/project-exsa.webp",
     link: "https://exsa.net/es",
   },
   {
-    id: 4,
+    id: 7,
     company: "Infopesa",
     stack: "LARAVEL | HTML | CSS | JS | VUE",
     img: "/images/portfolio/projects/project-infopesa.webp",
     link: "https://infopesa.com/",
   },
   {
-    id: 5,
+    id: 8,
     company: "Pisco Viñas de Oro",
     stack: "NextJs | TS | Tailwindcss | WordPress | GraphQL",
     img: "/images/portfolio/projects/project-vinas-de-oro.webp",
