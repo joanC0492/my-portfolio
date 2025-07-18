@@ -71,7 +71,7 @@ export const HomeAbout = (props: IProps) => {
                       <Title
                         text={skillCategory.title}
                         variant="h5"
-                        className="text-[18px] text-jc-dark-4 leading-none"
+                        className="text-sm md:text-[18px] text-jc-dark-4 leading-none"
                       />
                     </div>
                     <Skills
