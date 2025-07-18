@@ -41,6 +41,10 @@ export const HomeHero = (props: IProps) => {
           >
             Frontend Developer
           </p>
+          <p className="dark:text-jc-gray-2 lg:text-lg mx-auto lg:ml-0 max-w-[360px] lg:max-w-[576px] mt-1 px-4 md:px-0">
+            Especializado en WordPress, React y Next.js. Creo sitios rápidos,
+            accesibles y escalables.
+          </p>
           <RrssList className="mt-6 lg:justify-start" />
           <ButtonPrimary
             href="/docs/cvcochachi2025.pdf?v=2"

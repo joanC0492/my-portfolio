@@ -9,7 +9,12 @@ export const RrssList = ({ className = "" }: IProps) => {
     <ul className={cn("flex gap-4 justify-center items-center", className)}>
       {dataRrss.map((item) => (
         <li key={item.id}>
-          <a href={item.url} target="_blank" className="text-2xl">
+          <a
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-2xl"
+          >
             <item.Icon />
           </a>
         </li>
