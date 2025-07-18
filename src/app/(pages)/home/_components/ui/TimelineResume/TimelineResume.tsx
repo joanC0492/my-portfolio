@@ -16,9 +16,15 @@ export const TimelineResume = ({ className }: IProps) => {
       )}
     >
       {dataResumes.map((data, index) => {
-        if ((index + 1) % 2 === 0) {
+        // if ((index + 1) % 2 === 0) {
+        if ((index + 1) % 3 === 0) {
+          // console.log(index);
+          // console.log(data.company);
           Columns.push(
             <li className={""} key={index}>
+              {/* <TimelineResumeItem {...dataResumes[index - 1]} />
+              <TimelineResumeItem {...dataResumes[index]} /> */}
+              <TimelineResumeItem {...dataResumes[index - 2]} />
               <TimelineResumeItem {...dataResumes[index - 1]} />
               <TimelineResumeItem {...dataResumes[index]} />
             </li>
