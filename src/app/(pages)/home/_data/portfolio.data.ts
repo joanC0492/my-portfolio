@@ -218,6 +218,7 @@ export const dataProjects: IDataProjects[] = [
     stack: "WORDPRESS | HTML | CSS | JS",
     img: "/images/portfolio/projects/project-dreduardoflorescirugia.webp",
     link: "https://joancochachi.online/dr-manuel-eduardo-flores-vilchez/",
+    pageLink: "dreduardoflorescirugia",
   },
   {
     id: 1,
@@ -225,6 +226,7 @@ export const dataProjects: IDataProjects[] = [
     stack: "WORDPRESS | HTML | CSS | JS",
     img: "/images/portfolio/projects/project-spaciuz.webp",
     link: "https://joancochachi.online/spaciuz/",
+    pageLink: "spaciuz",
   },
   {
     id: 2,
@@ -232,6 +234,7 @@ export const dataProjects: IDataProjects[] = [
     stack: "HTML | CSS | JS | HubSpot CMS",
     img: "/images/portfolio/projects/project-the-unconference.webp",
     link: "https://joancochachi.online/the-unconference-23/",
+    pageLink: "the-unconference-23",
   },
   {
     id: 3,
@@ -239,6 +242,7 @@ export const dataProjects: IDataProjects[] = [
     stack: "HTML | CSS | JS | GA | OPTIMIZE | GTM",
     img: "/images/portfolio/projects/project-movistar.webp",
     link: "https://www.movistar.com.pe/",
+    pageLink: "movistar",
   },
   {
     id: 4,
