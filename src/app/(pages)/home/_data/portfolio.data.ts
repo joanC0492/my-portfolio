@@ -159,7 +159,7 @@ export const dataResumes: IResume[] = [
       `Programación de funciones a medida con PHP, shortcodes y hooks nativos.`,
       `Optimización de velocidad y SEO técnico (caché, lazy load, estructura de encabezados).`,
       `Implementación de sistemas educativos y de gamificación con LearnPress y GamiPress.`,
-      `Tecnologías: WordPress, WooCommerce, PHP, MySQL, LearnPress, GamiPress, Elementor, DIVI`,
+      `<span class="font-bold">Tecnologías: WordPress, WooCommerce, PHP, MySQL, LearnPress, GamiPress, Elementor, DIVI</span>`,
     ],
   },
   {
@@ -214,69 +214,136 @@ export const dataResumes: IResume[] = [
 export const dataProjects: IDataProjects[] = [
   {
     id: 0,
+    company: "Tío Saji",
+    stack: "SHOPIFY | LIQUID | HTML | CSS | JS",
+    img: "/images/portfolio/projects/project-tio-saji.webp",
+    link: "",
+    pageLink: "tiosaji",
+    description: `Tienda personalizada en Shopify.<br />
+    Modificaciones en Liquid, campos dinámicos y ajustes visuales para adaptar el diseño a la identidad de la marca.<br />
+    <a class="underline" href="https://tiosaji.com/" target="_blank" rel="noopener noreferrer">https://tiosaji.com/</a>
+    `,
+  },
+  {
+    id: 1,
+    company: "Solgas",
+    stack: "NEXT.JS | LARAVEL | TAILWIND | SQL SERVER",
+    img: "/images/portfolio/projects/project-solgas.webp",
+    link: "https://joancochachi.online/dr-manuel-eduardo-flores-vilchez/",
+    pageLink: "dreduardoflorescirugia",
+    description: `
+    Desarrollo de la sección <strong>Verifica tu balón</strong> en el sitio oficial de Solgas.<br />
+    Implementación con <strong>Next.js</strong> y <strong>Laravel</strong>, incluyendo integración con bases de datos <strong>MySQL</strong> y <strong>SQL Server</strong> mediante API REST personalizada.<br />
+    <a class="underline" href="https://www.solgas.com.pe/verifica-tu-balon" target="_blank" rel="noopener noreferrer">
+    https://www.solgas.com.pe/verifica-tu-balon
+    </a>`,
+  },
+  {
+    id: 2,
     company: "Dr. Manuel Eduardo Flores Vilchez",
     stack: "WORDPRESS | HTML | CSS | JS",
     img: "/images/portfolio/projects/project-dreduardoflorescirugia.webp",
     link: "https://joancochachi.online/dr-manuel-eduardo-flores-vilchez/",
     pageLink: "dreduardoflorescirugia",
+    description: `
+    Desarrollo de un sitio WordPress con <strong>tema personalizado desde cero</strong>, basado en un diseño aprobado en Illustrator.  
+    Integración con plugins gratuitos y maquetación responsive compatible con Elementor.<br />
+    <a class="underline" href="https://dreduardoflorescirugia.pe/" target="_blank" rel="noopener noreferrer">
+      https://dreduardoflorescirugia.pe/
+    </a>
+    `,
   },
   {
-    id: 1,
+    id: 3,
     company: "Spaciuz",
     stack: "WORDPRESS | HTML | CSS | JS",
     img: "/images/portfolio/projects/project-spaciuz.webp",
     link: "https://joancochachi.online/spaciuz/",
     pageLink: "spaciuz",
+    description: `
+    Personalización del tema <strong>WP Rentals</strong> en WordPress para un sitio de publicación y búsqueda de espacios de alquiler.<br />
+    Ajustes visuales con CSS y configuración del mapa interactivo mediante panel administrativo.<br />
+    <a class="underline" href="https://spaciuz.com/" target="_blank" rel="noopener noreferrer">
+      https://spaciuz.com/
+    </a>
+    `,
   },
   {
-    id: 2,
+    id: 4,
     company: "Colectivo23",
-    stack: "HTML | CSS | JS | HubSpot CMS",
+    stack: "HubSpot CMS | HTML | CSS | JS",
     img: "/images/portfolio/projects/project-the-unconference.webp",
     link: "https://joancochachi.online/the-unconference-23/",
     pageLink: "the-unconference-23",
+    description: `
+    Maquetación desde cero en <strong>HubSpot CMS</strong> para la landing del evento <strong>The Unconference 2025</strong>.<br />
+    Se implementó diseño responsive, <strong>contador dinámico</strong> y campos editables personalizados para permitir la gestión de contenidos por parte del cliente.`,
   },
   {
-    id: 3,
+    id: 5,
     company: "Movistar",
     stack: "HTML | CSS | JS | GA | OPTIMIZE | GTM",
     img: "/images/portfolio/projects/project-movistar.webp",
     link: "https://www.movistar.com.pe/",
     pageLink: "movistar",
+    description: `
+      Desarrollo de funcionalidades en la web pública y catálogo de Movistar, junto a la implementación de <strong>experimentos A/B</strong> usando Google Optimize.<br />
+      Personalización de landings y configuración avanzada de etiquetas en <strong>Google Tag Manager</strong>, con análisis de comportamiento mediante Hotjar.<br />
+      <a class="underline" href="https://www.movistar.com.pe/" target="_blank" rel="noopener noreferrer">
+        https://www.movistar.com.pe/
+      </a>
+    `,
   },
   {
-    id: 4,
+    id: 6,
     company: "Entel Empresas",
     stack: "WORDPRESS | HTML | PUG | CSS | SCSS | JS",
     img: "/images/portfolio/projects/project-entel-empresas.webp",
     link: "https://www.entel.pe/empresas/",
+    pageLink: "entel",
+    description: `
+      Desarrollo de <strong>landing pages orientadas a conversión</strong> y mejoras técnicas en la web de Entel Empresas.<br />
+      Implementación de funcionalidades frontend y backend con PHP y WordPress, y refactorización de componentes reutilizables.<br />
+      <a class="underline" href="https://www.entel.pe/empresas/" target="_blank" rel="noopener noreferrer">
+        https://www.entel.pe/empresas/
+      </a>
+    `,
   },
   {
-    id: 5,
+    id: 7,
     company: "Innovación Digital",
     stack: "WORDPRESS | HTML | CSS | JS",
     img: "/images/portfolio/projects/project-innovacion-digital.webp",
     link: "https://innovaciondigital.biz/",
+    description: `
+      Desarrollo de sitio web en <strong>WordPress</strong> para una agencia de servicios digitales.<br />
+      Implementación de Google Tag Manager y Google Analytics para medición de conversiones en secciones clave.<br />      
+    `,
   },
   {
-    id: 6,
+    id: 8,
     company: "Exsa",
     stack: "LARAVEL | HTML | CSS | JS",
     img: "/images/portfolio/projects/project-exsa.webp",
     link: "https://exsa.net/es",
+    description: ``,
   },
   {
-    id: 7,
+    id: 9,
     company: "Infopesa",
     stack: "LARAVEL | HTML | CSS | JS | VUE",
     img: "/images/portfolio/projects/project-infopesa.webp",
     link: "https://infopesa.com/",
+    pageLink: "infopesa",
+    description: ``,
   },
   {
-    id: 8,
+    id: 10,
     company: "Pisco Viñas de Oro",
     stack: "NextJs | TS | Tailwindcss | WordPress | GraphQL",
     img: "/images/portfolio/projects/project-vinas-de-oro.webp",
     link: "https://www.piscovinasdeoro.com.pe/es",
+    pageLink: "vinas-de-oro",
+    description: ``,
   },
 ];

@@ -44,8 +44,18 @@ export const ProjectCarrousel = () => {
               <h5 className="my-2.5 text-[28px] font-bold tracking-tight">
                 {project.company}
               </h5>
+              {project.description && (
+                <div
+                  className="mb-4 -mt-2"
+                  dangerouslySetInnerHTML={{ __html: project.description }}
+                />
+              )}
               <ButtonPrimary
-                href={project.link}
+                href={
+                  project.pageLink
+                    ? `/portafolio/${project.pageLink}`
+                    : project.link
+                }
                 text="VER PROYECTO"
                 className=""
                 target="_blank"

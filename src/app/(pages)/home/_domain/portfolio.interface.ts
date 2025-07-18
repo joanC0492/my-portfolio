@@ -34,4 +34,5 @@ export interface IDataProjects {
   img: string;
   link: string;
   pageLink?: string;
+  description: string;
 }

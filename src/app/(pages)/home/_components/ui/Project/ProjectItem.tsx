@@ -11,6 +11,7 @@ export const ProjectItem = ({
   stack,
   img,
   link,
+  pageLink,
 }: IDataProjects) => {
   const { openModalCarrousel, changeProjectIndexActive } = useUIContext();
 
@@ -53,7 +54,11 @@ export const ProjectItem = ({
             <button>
               <FaPlus className="text-xl" onClick={handleCarrousel} />
             </button>
-            <a href={link} target="_blank">
+            <a
+              href={pageLink ? `/portafolio/${pageLink}` : link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaPaperclip className="text-xl" />
             </a>
           </div>
