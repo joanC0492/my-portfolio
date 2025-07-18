@@ -1,6 +1,6 @@
 import { IDataProjects, IDataRrss, IDataSkills, IResume } from "../_domain";
 import { FaLinkedinIn, FaGithub, FaWhatsapp } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+import { MdDeveloperMode, MdDns, MdEmail, MdLaptopMac, MdSettings, MdTerminal } from "react-icons/md";
 import { MdOutlineEmail } from "react-icons/md";
 
 export const dataRrss: IDataRrss[] = [
@@ -27,56 +27,101 @@ export const dataRrss: IDataRrss[] = [
   // },
 ];
 
+// export const dataSkills: IDataSkills[] = [
 export const dataSkills: IDataSkills[] = [
   {
+    id: 0,
+    Icon: MdLaptopMac,
+    title: "Tecnologías frontend",
+    skills: [
+      {
+        id: 0,
+        title: "HTML & CSS",
+        percentage: 75,
+      },
+      {
+        id: 1,
+        title: "JavaScript (ES6+)",
+        percentage: 75,
+      },
+
+      {
+        id: 2,
+        title: "ReactJS",
+        percentage: 75,
+      },
+      {
+        id: 3,
+        title: "Next.js",
+        percentage: 75,
+      },
+      {
+        id: 4,
+        title: "Tailwind CSS",
+        percentage: 75,
+      },
+      {
+        id: 5,
+        title: "SASS",
+        percentage: 75,
+      },
+    ],
+  },
+  {
     id: 1,
-    title: "HTML & CSS",
-    percentage: 75,
+    Icon: MdDns,
+    title: "Backend, CMS y DB",
+    skills: [
+      {
+        id: 0,
+        title: "Laravel",
+        percentage: 75,
+      },
+      {
+        id: 1,
+        title: "WordPress / CMS",
+        percentage: 75,
+      },
+      {
+        id: 2,
+        title: "Shopify (Liquid)",
+        percentage: 75,
+      },
+
+      {
+        id: 3,
+        title: "MySQL",
+        percentage: 75,
+      },
+      {
+        id: 4,
+        title: "MongoDB",
+        percentage: 75,
+      },
+    ],
   },
   {
     id: 2,
-    title: "SASS",
-    percentage: 75,
-  },
-  {
-    id: 3,
-    title: "JAVASCRIPT",
-    percentage: 75,
-  },
-  {
-    id: 4,
-    title: "REACTJS",
-    percentage: 75,
-  },
-  {
-    id: 5,
-    title: "TAILWIND",
-    percentage: 75,
-  },
-  {
-    id: 6,
-    title: "NODEJS",
-    percentage: 75,
-  },
-  {
-    id: 7,
-    title: "GIT",
-    percentage: 75,
-  },
-  {
-    id: 8,
-    title: "WORDPRESS/CMS",
-    percentage: 75,
-  },
-  {
-    id: 9,
-    title: "MONGODB",
-    percentage: 75,
-  },
-  {
-    id: 10,
-    title: "MYSQL",
-    percentage: 75,
+    Icon: MdTerminal,
+    title: "Herramientas y entorno",
+    skills: [
+      {
+        id: 0,
+        title: "Git & GitHub",
+        percentage: 75,
+      },
+      {
+        id: 1,
+        title: "Node.js",
+        percentage: 75,
+      },
+
+      {
+        id: 2,
+        title: "Vite",
+        percentage: 75,
+      },
+    ],
   },
 ];
 

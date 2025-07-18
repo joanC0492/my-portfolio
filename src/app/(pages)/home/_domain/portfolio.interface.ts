@@ -14,10 +14,17 @@ export interface IDataRrss {
   url: string;
 }
 
-export interface IDataSkills {
+export interface ISkills {
   id: number;
   title: string;
   percentage: number;
+}
+export interface IDataSkills {
+  id: number;
+  title: string;
+  Icon: IconType;
+  skills: ISkills[];
+  // percentage: number;
 }
 
 export interface IDataProjects {
