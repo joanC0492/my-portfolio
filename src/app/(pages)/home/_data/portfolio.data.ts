@@ -1,6 +1,13 @@
 import { IDataProjects, IDataRrss, IDataSkills, IResume } from "../_domain";
 import { FaLinkedinIn, FaGithub, FaWhatsapp } from "react-icons/fa";
-import { MdDeveloperMode, MdDns, MdEmail, MdLaptopMac, MdSettings, MdTerminal } from "react-icons/md";
+import {
+  MdDeveloperMode,
+  MdDns,
+  MdEmail,
+  MdLaptopMac,
+  MdSettings,
+  MdTerminal,
+} from "react-icons/md";
 import { MdOutlineEmail } from "react-icons/md";
 
 export const dataRrss: IDataRrss[] = [
@@ -132,11 +139,13 @@ export const dataResumes: IResume[] = [
     company: "FREELANCE",
     period: "(05/2022 - Actualmente)",
     experienceList: [
-      `Desarrollo de landing pages en HubSpot CMS.`,
-      `Sitio web para cirujano con WordPress y Elementor.`,
-      `Personalización de WP-Rentals en proyecto wordpress, implementando: WooCommerce, Mercado Pago y mapas.`,
-      `Mailings responsivos para BCP (Outlook Desktop compatible).`,
-      `Desarrollo y mantenimiento de proyectos en ReactJS.`,
+      `Desarrollo de sitios WordPress personalizados con Elementor y WP-Rentals, integrando WooCommerce, Mercado Pago, Culqi y mapas interactivos.`,
+      `Creación de landing pages en HubSpot CMS.`,
+      `Personalización de temas Shopify mediante Liquid, configuración de campos dinámicos y ajustes visuales.`,
+      `Elaboración de mailings responsivos compatibles con clientes como Outlook Desktop.`,
+      `Consumo e integración de APIs RESTful desarrolladas en Laravel, incluyendo conexión con múltiples bases de datos.`,
+      `Desarrollo y mantenimiento de aplicaciones frontend con ReactJS y Next.js.`,
+      `<span class="font-bold">Tecnologías: WordPress, Elementor, WooCommerce, Shopify (Liquid), HubSpot CMS, Laravel, React, Next.js, MySQL, Git</span>`,
     ],
   },
   {
@@ -150,6 +159,7 @@ export const dataResumes: IResume[] = [
       `Programación de funciones a medida con PHP, shortcodes y hooks nativos.`,
       `Optimización de velocidad y SEO técnico (caché, lazy load, estructura de encabezados).`,
       `Implementación de sistemas educativos y de gamificación con LearnPress y GamiPress.`,
+      `Tecnologías: WordPress, WooCommerce, PHP, MySQL, LearnPress, GamiPress, Elementor, DIVI`,
     ],
   },
   {
@@ -158,14 +168,10 @@ export const dataResumes: IResume[] = [
     company: "HAVAS+ SAC",
     period: "(08/2021 - 04/2022)",
     experienceList: [
-      `Implementar experimentos que ayudaron a incrementar la conversión de leads, para Movistar (<a href="https://www.movistar.com.pe/" target="_blank" rel="noopener">https://movistar.com.pe</a> ).`,
-      `Desarrollo de nuevas funcionalidades en la web pública de Movistar.`,
-      `Desarrollo de nuevas funcionalidades en el catálogo de Movistar ( <a href="https://catalogo.movistar.com.pe/" target="_blank" rel="noopener">https://catalogo.movistar.com.pe/</a> ).`,
-      `Mantenimiento a la aplicación ganadores de Movistar.`,
-      `Configuración de etiquetas con Google Tag Manager`,
-      `Intervenciones de ladings utilizando scripts GTM`,
-      `Creación de experimentos (A / B y otros), utilizando Google Optimize`,
-      `Tecnologías utilizadas: Javascript, CSS3, Html5, VueJs, Gulp, GIT, Google Optimize, GTM, Hotjar`,
+      `Desarrollo de funcionalidades en la web pública y catálogo de Movistar.`,
+      `Creación de experimentos A/B y personalización de landings usando Google Optimize y GTM.`,
+      `Configuración avanzada de etiquetas en GTM, con análisis de comportamiento vía Hotjar.`,
+      `<span class="font-bold">Tecnologías utilizadas: Javascript, CSS3, Html5, VueJs, Gulp, GIT, Google Optimize, GTM, Hotjar</span>`,
     ],
   },
   {
@@ -174,10 +180,10 @@ export const dataResumes: IResume[] = [
     company: "SRBURNS PERÚ",
     period: "(01/2021 - 07/2021)",
     experienceList: [
-      `Mejoras en la web de Entel Empresas, tanto Frontend como Backend ( <a href="https://www.entel.pe/empresas/" target="_blank" rel="noopener">https://www.entel.pe/empresas/</a> ).`,
-      `Desarrollo de Landings Pages, enfocado a la conversión de Leads`,
-      `Mantenimiento y creación de funcionalidades`,
-      `Tecnologías utilizadas: Javascript, CSS3, Html5, Pug, Jquery, PHP, Wordpress, MySql, Gulp, WebPack, GIT`,
+      `Desarrollo de landing pages para Entel Empresas con foco en conversión.`,
+      `Implementación de funcionalidades frontend y backend para la web de Entel.`,
+      `Mantenimiento técnico y mejora de componentes reutilizables.`,
+      `<span class="font-bold">Tecnologías: JavaScript, HTML5, CSS3, PHP, WordPress, MySQL, Pug, Gulp, Webpack, Git, jQuery</span>`,
     ],
   },
   {
@@ -186,9 +192,9 @@ export const dataResumes: IResume[] = [
     company: "IDEAS LATAM SAC",
     period: "(09/2020 - 01/2021)",
     experienceList: [
-      `Creación de sistemas webs usando Wordpress`,
-      `Implementación de Google Tag Manager y Google Analytic en Webs y Landing Pages`,
-      `Tecnologías utilizadas: Javascript, CSS3, Less, Booststrap, Html5, Jquery, PHP y Wordpress`,
+      `Creación de sistemas web con WordPress.`,
+      `Implementación de Google Tag Manager y Google Analytics para seguimiento en landing pages.`,
+      `<span class="font-bold">Tecnologías utilizadas: Javascript, CSS3, Booststrap, Html5, Jquery, PHP y Wordpress</span>`,
     ],
   },
   {
@@ -197,15 +203,15 @@ export const dataResumes: IResume[] = [
     company: "MEDIA IMPACT",
     period: "(2018 - 2020)",
     experienceList: [
-      `Maquetación de sitios web`,
-      `Web responsive`,
-      `Mantenimiento de base de datos`,
-      `Tecnologías usadas: Javascript, CSS3, Html5, Jquery, PHP, Laravel, MySql, VueJS, GIT`,
+      `Maquetación de sitios web responsive.`,
+      `Mantenimiento y gestión básica de bases de datos.`,
+      `Apoyo en desarrollo de componentes frontend personalizados.`,
+      `<span class="font-bold">Tecnologías: JavaScript, PHP, Laravel, MySQL, jQuery, Vue.js, HTML5, CSS3, Git</span>`,
     ],
   },
 ];
 
-export const dataProjects: IDataProjects[] = [  
+export const dataProjects: IDataProjects[] = [
   {
     id: 0,
     company: "Dr. Manuel Eduardo Flores Vilchez",
