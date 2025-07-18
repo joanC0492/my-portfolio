@@ -63,7 +63,7 @@ export const HomeAbout = (props: IProps) => {
                 className="mt-4 text-[26px] text-jc-dark-4"
               />
 
-              <ul className="flex flex-wrap">
+              <ul className="flex flex-wrap [&_li:last-child]:w-full">
                 {dataSkills.map((skillCategory) => (
                   <li key={skillCategory.id} className="w-1/2 | md:flex-1">
                     <div className="inline-flex gap-1 items-center mt-5">
