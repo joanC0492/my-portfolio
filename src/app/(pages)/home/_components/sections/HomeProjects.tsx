@@ -7,7 +7,7 @@ export const HomeProjects = (props: IProps) => {
   const { className, ...restProps } = props;
   return (
     <section
-      className={cn("lg:h-screen py-12 container", className)}
+      className={cn("py-12 container", className)}
       {...restProps}
     >
       <div
