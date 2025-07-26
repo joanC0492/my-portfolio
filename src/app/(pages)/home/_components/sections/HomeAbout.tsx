@@ -38,7 +38,8 @@ export const HomeAbout = (props: IProps) => {
           >
             {/* 2xl:mt-0 */}
             <Image
-              src={"/images/portfolio/profile-laptop.svg"}
+              // src={"/images/portfolio/profile-laptop.svg"}
+              src={"/images/portfolio/profile-laptop--compress.webp"}
               width={165}
               height={89}
               alt="Home student"

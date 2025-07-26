@@ -12,7 +12,8 @@ export const HomeHero = (props: IProps) => {
       {...restProps}
     >
       <Background
-        src="/images/portfolio/home-background.svg"
+        // src="/images/portfolio/home-background.svg"
+        src="/images/portfolio/home-background--compress.webp"
         name="Home Background"
         className={cn(
           "opacity-25 -left-16",
