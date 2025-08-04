@@ -230,7 +230,7 @@ export const dataProjects: IDataProjects[] = [
     stack: "NEXT.JS | LARAVEL | TAILWIND | SQL SERVER",
     img: "/images/portfolio/projects/project-solgas.webp",
     link: "https://joancochachi.online/dr-manuel-eduardo-flores-vilchez/",
-    pageLink: "dreduardoflorescirugia",
+    pageLink: "solgas",
     description: `
     Desarrollo de la sección <strong>Verifica tu balón</strong> en el sitio oficial de Solgas.<br />
     Implementación con <strong>Next.js</strong> y <strong>Laravel</strong>, incluyendo integración con bases de datos <strong>MySQL</strong> y <strong>SQL Server</strong> mediante API REST personalizada.<br />
