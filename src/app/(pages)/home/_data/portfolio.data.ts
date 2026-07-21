@@ -39,95 +39,60 @@ export const dataSkills: IDataSkills[] = [
   {
     id: 0,
     Icon: MdLaptopMac,
-    title: "Tecnologías frontend",
+    title: "WordPress & eCommerce",
     skills: [
-      {
-        id: 0,
-        title: "HTML & CSS",
-        percentage: 75,
-      },
-      {
-        id: 1,
-        title: "JavaScript (ES6+)",
-        percentage: 75,
-      },
-
-      {
-        id: 2,
-        title: "ReactJS",
-        percentage: 75,
-      },
-      {
-        id: 3,
-        title: "Next.js",
-        percentage: 75,
-      },
-      {
-        id: 4,
-        title: "Tailwind CSS",
-        percentage: 75,
-      },
-      {
-        id: 5,
-        title: "SASS",
-        percentage: 75,
-      },
+      { id: 0, title: "WordPress" },
+      { id: 1, title: "WooCommerce" },
+      { id: 2, title: "Elementor" },
+      { id: 3, title: "ACF" },
+      { id: 4, title: "Gravity Forms" },
+      { id: 5, title: "Contact Form 7" },
+      { id: 6, title: "Themes y child themes" },
+      { id: 7, title: "Plugins personalizados" },
     ],
   },
   {
     id: 1,
-    Icon: MdDns,
-    title: "Backend, CMS y DB",
+    Icon: MdDeveloperMode,
+    title: "Desarrollo web",
     skills: [
-      {
-        id: 0,
-        title: "Laravel",
-        percentage: 75,
-      },
-      {
-        id: 1,
-        title: "WordPress / CMS",
-        percentage: 75,
-      },
-      {
-        id: 2,
-        title: "Shopify (Liquid)",
-        percentage: 75,
-      },
-
-      {
-        id: 3,
-        title: "MySQL",
-        percentage: 75,
-      },
-      {
-        id: 4,
-        title: "MongoDB",
-        percentage: 75,
-      },
+      { id: 0, title: "PHP" },
+      { id: 1, title: "JavaScript (ES6+)" },
+      { id: 2, title: "HTML5" },
+      { id: 3, title: "CSS3" },
+      { id: 4, title: "MySQL" },
+      { id: 5, title: "APIs REST" },
+      { id: 6, title: "AJAX" },
+      { id: 7, title: "Hooks" },
+      { id: 8, title: "Shortcodes" },
     ],
   },
   {
     id: 2,
-    Icon: MdTerminal,
-    title: "Herramientas y entorno",
+    Icon: MdSettings,
+    title: "Herramientas e integraciones",
     skills: [
-      {
-        id: 0,
-        title: "Git & GitHub",
-        percentage: 75,
-      },
-      {
-        id: 1,
-        title: "Node.js",
-        percentage: 75,
-      },
-
-      {
-        id: 2,
-        title: "Vite",
-        percentage: 75,
-      },
+      { id: 0, title: "Git y GitHub" },
+      { id: 1, title: "SSH" },
+      { id: 2, title: "cPanel" },
+      { id: 3, title: "Mailchimp" },
+      { id: 4, title: "Stripe" },
+      { id: 5, title: "Google Ads" },
+      { id: 6, title: "Google Tag Manager" },
+      { id: 7, title: "Google Analytics" },
+    ],
+  },
+  {
+    id: 3,
+    Icon: MdDns,
+    title: "Tecnologías complementarias",
+    skills: [
+      { id: 0, title: "Laravel" },
+      { id: 1, title: "React" },
+      { id: 2, title: "Next.js" },
+      { id: 3, title: "Angular" },
+      { id: 4, title: "Shopify Liquid" },
+      { id: 5, title: "HubSpot CMS" },
     ],
   },
 ];
@@ -135,6 +100,21 @@ export const dataSkills: IDataSkills[] = [
 export const dataResumes: IResume[] = [
   {
     id: 0,
+    position: "WordPress Developer",
+    company: "FULLTIMEFORCE",
+    period: "(Septiembre 2025 - Julio 2026)",
+    experienceList: [
+      `Desarrollo y mantenimiento remoto de sitios WordPress y WooCommerce para clientes internacionales.`,
+      `Creación y modificación de funcionalidades mediante PHP, JavaScript, hooks, shortcodes, consultas personalizadas y AJAX.`,
+      `Personalización de themes, child themes y plugins, trabajando con Elementor, ACF, Gravity Forms y Contact Form 7.`,
+      `Integraciones con APIs, Mailchimp, Stripe, Google Ads, Google Tag Manager y herramientas de analítica.`,
+      `Diagnóstico y solución de errores, optimización de rendimiento, migraciones y trabajo en entornos locales, staging y producción.`,
+      `Uso de Git, GitHub, SSH, cPanel y MySQL para despliegues, mantenimiento y resolución de incidencias.`,
+      `<span class="font-bold">Tecnologías: WordPress, WooCommerce, PHP, JavaScript, HTML, CSS, MySQL, Elementor, ACF, Gravity Forms, Contact Form 7, Git, GitHub, SSH y cPanel</span>`,
+    ],
+  },
+  {
+    id: 1,
     position: "Frontend Developer",
     company: "FREELANCE",
     period: "(05/2022 - Actualmente)",
@@ -149,7 +129,7 @@ export const dataResumes: IResume[] = [
     ],
   },
   {
-    id: 1,
+    id: 2,
     position: "Desarrollador WordPress",
     company: "AMAZON ARGUZ S.A.C.",
     period: "(Julio 2024 - Marzo 2025)",
@@ -163,7 +143,7 @@ export const dataResumes: IResume[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     position: "CRO UX Analyst & Fullstack Developer",
     company: "HAVAS+ SAC",
     period: "(08/2021 - 04/2022)",
@@ -175,7 +155,7 @@ export const dataResumes: IResume[] = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     position: "Frontend Developer",
     company: "SRBURNS PERÚ",
     period: "(01/2021 - 07/2021)",
@@ -187,7 +167,7 @@ export const dataResumes: IResume[] = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     position: "Web Developer",
     company: "IDEAS LATAM SAC",
     period: "(09/2020 - 01/2021)",
@@ -198,7 +178,7 @@ export const dataResumes: IResume[] = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     position: "Frontend Developer",
     company: "MEDIA IMPACT",
     period: "(2018 - 2020)",

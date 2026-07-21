@@ -16,11 +16,11 @@ export const HomeContact = (props: IProps) => {
             )}
           >
             <h3 className="font-bold text-[26px]">Joan Cochachi</h3>
-            <p className="mt-4">Frontend Developer</p>
+            <p className="mt-4">WordPress & PHP Developer</p>
             <p className="mt-4">
-              Estoy disponible para el trabajo independiente.
+              Disponible para oportunidades de trabajo remoto. Puedes
+              contactarme por correo, LinkedIn o GitHub.
             </p>
-            <p>Conéctese conmigo a través de los siguientes medios.</p>
             {/* <ul className="mt-4 text-left inline-block">
               <li>
                 <span className="mr-2">Celular:</span>

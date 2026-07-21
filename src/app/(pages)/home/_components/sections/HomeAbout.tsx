@@ -19,13 +19,15 @@ export const HomeAbout = (props: IProps) => {
           {/* <div className="text-jc-dark-5 px-4 mt-4 text-lg font-open-sans font-normal space-y-1 dark:text-jc-gray-2"> */}
           <div className="text-jc-dark-5 px-4 mt-4 text-lg font-open-sans font-normal space-y-1 dark:text-jc-white-1">
             <p>
-              ¡Hola! Soy Joan, desarrollador frontend con enfoque en soluciones
-              modernas, eficientes y bien estructuradas.
+              Soy desarrollador web especializado en WordPress, WooCommerce y
+              PHP. Tengo experiencia en mantenimiento, desarrollo de
+              funcionalidades, personalización de themes y plugins,
+              integraciones con servicios externos, optimización de rendimiento
+              y resolución de errores.
             </p>
             <p>
-              Apasionado por el aprendizaje constante, me especializo en
-              construir interfaces funcionales, escalables y fáciles de
-              mantener.
+              También trabajo con JavaScript, MySQL, Git, SSH y tecnologías
+              complementarias como React, Next.js, Angular y Laravel.
             </p>
           </div>
           <div
