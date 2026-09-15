@@ -1,6 +1,6 @@
 # `public` y `docs`: recursos y contenido editorial
 
-**Última revisión:** 2026-09-14.
+**Última revisión:** 2026-09-15.
 
 ## Recursos públicos
 
@@ -11,16 +11,18 @@ Los archivos de `public/` se sirven desde la raíz del sitio. Por ejemplo, `publ
 | [public/docs/](../../public/docs/) | Siete versiones de CV en PDF; la home enlaza `cvcochachi2025.pdf?v=4` |
 | [public/images/portfolio/case-studies/](../../public/images/portfolio/case-studies/) | Doce WebP: dos variantes de portada por cada uno de los seis casos |
 | [public/images/portfolio/projects/](../../public/images/portfolio/projects/) | Imágenes de tarjetas de proyectos anteriores, con variantes `-min` disponibles |
-| [public/images/portfolio/projects-page/](../../public/images/portfolio/projects-page/) | Nueve capturas históricas de detalle; la ruta actual no construye sus imágenes desde esta carpeta |
+| [public/images/portfolio/projects-page/](../../public/images/portfolio/projects-page/) | Nueve capturas completas conectadas por `pageImage`; carpeta común para futuros proyectos y casos destacados |
 | [public/images/portfolio/](../../public/images/portfolio/) | Fondos y laptop en SVG y WebP comprimido |
 | [public/images/placeholder.webp](../../public/images/placeholder.webp) | Recurso disponible, sin fallback automático de proyectos implementado |
 | [public/next.svg](../../public/next.svg), [public/vercel.svg](../../public/vercel.svg) | Recursos remanentes del arranque; sin uso en los componentes revisados |
 
-Las tarjetas y el carrusel usan `project.img`. Para los seis casos, `img` y `coverImage` apuntan a las variantes `*-cover-1200x675.webp`. El detalle elige `heroImage || coverImage || img`, y actualmente ningún proyecto define `heroImage`. Los archivos de `projects-page/` siguen presentes, pero la página ya no los selecciona por concatenación del slug.
+Las tarjetas y el carrusel usan `project.img`. Para los seis casos, `img` y `coverImage` apuntan a las variantes `*-cover-1200x675.webp`. El detalle prioriza `pageImage` con sus dimensiones reales. Las nueve capturas existentes están asignadas explícitamente en los datos; la ruta no deduce su ubicación a partir del slug. Sin una `pageImage` válida conserva `heroImage || coverImage || img`. Actualmente ningún proyecto define `heroImage`.
 
 La imagen de fondo activa es `home-background--compress.webp`. La laptop de About utiliza `profile-laptop--compress.webp`, aunque el elemento está oculto con `hidden`.
 
 ## Casos de estudio editoriales
+
+Para nuevas capturas completas, usar `projects-page/<pageLink>.webp` tanto en proyectos anteriores como en casos destacados. Conservar la captura vertical completa, sin convertirla a 16:9 ni ampliarla artificialmente. Las portadas para tarjetas continúan en sus carpetas actuales. Para un cambio de modo paso a paso, consultar [el ejemplo de MoveMyBike](03-home-datos-y-dominio.md#ejemplo-cambiar-movemybike-a-captura).
 
 [docs/case-studies/](../case-studies/) contiene seis documentos: `movemybike.md`, `handh-classics.md`, `my-chef-steph.md`, `veblen.md`, `offitravel.md` y `tokenovate.md`.
 
@@ -41,7 +43,7 @@ Los documentos previos se conservaron en esta revisión. Las discrepancias se ha
 
 1. **Cambio de portada:** añadir el archivo a `public/` y revisar `img`, `coverImage` y, si corresponde, la imagen social global. Cambiar solo `coverImage` no modifica la imagen de tarjeta o carrusel.
 2. **Cambio de CV:** revisar el archivo servido y el `href` literal en `HomeHero`. La fecha del nombre y el parámetro `v=4` no se actualizan automáticamente.
-3. **Nuevo recurso de detalle:** guardar una imagen en `projects-page/` no la conecta al proyecto; debe asignarse a un campo consumido por la ruta.
+3. **Nuevo recurso de detalle:** guardar una imagen en `projects-page/` con nombre `<pageLink>.webp`, completar `pageImage` con su ruta pública y dimensiones reales, y seleccionar `viewMode: "image"` para que tarjeta y modal abran la página interna.
 4. **Cambio editorial:** revisar conjuntamente Markdown y objeto TypeScript; documentar cualquier diferencia intencional y mantener las aprobaciones aplicables.
 
-En esta revisión se comprobó la existencia local de las imágenes referenciadas por los proyectos. No se inspeccionó visualmente su contenido ni se verificaron los PDFs o los sitios externos.
+La revisión documental inicial comprobó la existencia de recursos sin validación visual. Las comprobaciones de la implementación de `viewMode` están registradas en [mantenimiento](08-mantenimiento.md). Los PDFs y la disponibilidad de sitios externos quedan fuera de esa verificación.

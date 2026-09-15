@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { dataProjects } from "../../home/_data";
+import { isValidPageImage } from "../../home/_domain/project-view";
 
 interface Props {
   params: {
@@ -73,15 +74,20 @@ export default function PortafolioPage({ params }: Props) {
     notFound();
   }
 
-  const image = project.heroImage || project.coverImage || project.img;
+  const pageImage = isValidPageImage(project.pageImage)
+    ? project.pageImage
+    : undefined;
+  const image =
+    pageImage?.src || project.heroImage || project.coverImage || project.img;
 
   return (
     <Image
       src={image}
       alt={project.alt || project.title || project.company}
-      width={1920}
-      height={1080}
-      className="w-full h-auto object-cover"
+      width={pageImage?.width || 1920}
+      height={pageImage?.height || 1080}
+      sizes="100vw"
+      className="block w-full h-auto"
     />
   );
 }

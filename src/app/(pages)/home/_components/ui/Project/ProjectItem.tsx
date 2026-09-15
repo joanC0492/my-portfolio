@@ -2,6 +2,7 @@
 import { cn } from "@/shared/helpers";
 import { FaPaperclip, FaPlus } from "react-icons/fa6";
 import { IDataProjects } from "../../../_domain";
+import { getProjectUrl } from "../../../_domain/project-view";
 import Image from "next/image";
 import { useUIContext } from "@/store/context/ui/UIContext";
 
@@ -14,9 +15,9 @@ export const ProjectItem = ({
   pageLink,
   type,
   publicUrl,
+  viewMode,
+  pageImage,
   title,
-  summary,
-  description,
   alt,
 }: IDataProjects) => {
   const { openModalCarrousel, changeProjectIndexActive } = useUIContext();
@@ -27,12 +28,13 @@ export const ProjectItem = ({
     .map((item) => item.trim())
     .filter(Boolean);
 
-  const projectUrl =
-    type === "case-study"
-      ? publicUrl || link
-      : pageLink
-      ? `/portafolio/${pageLink}`
-      : link;
+  const projectUrl = getProjectUrl({
+    viewMode,
+    publicUrl,
+    link,
+    pageLink,
+    pageImage,
+  });
 
   const handleCarrousel = () => {
     changeProjectIndexActive(id);
@@ -92,14 +94,16 @@ export const ProjectItem = ({
             >
               <FaPlus className="text-xl" />
             </button>
-            <a
-              href={projectUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`Visitar proyecto ${company}`}
-            >
-              <FaPaperclip className="text-xl" />
-            </a>
+            {projectUrl && (
+              <a
+                href={projectUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Visitar proyecto ${company}`}
+              >
+                <FaPaperclip className="text-xl" />
+              </a>
+            )}
           </div>
         </div>
       </div>

@@ -41,4 +41,4 @@ npm run start
 
 En un despliegue real, sustituir ese valor por el dominio público. También se puede crear `.env.local` a partir de [.env.example](.env.example) y completar el valor. La compilación falla si falta `SITE_URL` en producción. La carga de fuentes usa `next/font/google`.
 
-Comprobación disponible: `npm run lint`. No hay un script `test` configurado. Consultar [la guía de configuración](docs/arquitectura/07-configuracion.md) para detalles y límites.
+Comprobaciones disponibles: `npm run lint` y `node --test tests/project-view.test.cjs` para los destinos de proyectos. No hay un script `npm test` configurado. Consultar [la guía de configuración](docs/arquitectura/07-configuracion.md) para detalles y límites.

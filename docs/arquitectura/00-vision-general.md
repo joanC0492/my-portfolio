@@ -1,6 +1,6 @@
 # Visión general del proyecto
 
-**Última revisión:** 2026-09-14.
+**Última revisión:** 2026-09-15.
 
 ## Propósito y alcance
 
@@ -26,6 +26,7 @@ my-portfolio/
 │   ├── shared/                          → plantilla, UI, hooks y configuración
 │   └── store/                           → Context activo y esqueletos de estado
 ├── public/                              → imágenes y PDFs accesibles por URL
+├── tests/                               → pruebas del destino de proyectos con Node.js
 ├── docs/
 │   ├── arquitectura/                    → documentación técnica viva
 │   ├── case-studies/                    → contenido editorial de seis casos
@@ -65,7 +66,7 @@ Los componentes reciben contenido de los arrays locales. La interacción modific
 - La home compone la plantilla compartida y las secciones específicas.
 - `shared/components/template/TemplateMain.tsx` importa el carrusel de la home: la plantilla compartida tiene una dependencia concreta del portafolio.
 - La ruta de detalle y el sitemap importan los mismos datos que la home.
-- Las interfaces tipan los datos durante desarrollo; no hay validación de contenido en tiempo de ejecución.
+- Las interfaces tipan los datos durante desarrollo. `project-view.ts` valida la configuración mínima del destino y las dimensiones de la captura antes de mostrar enlaces.
 - Los `index.ts` reexportan símbolos para simplificar imports; no constituyen capas de servicios adicionales.
 
 ## Límites principales observados
@@ -74,6 +75,6 @@ Los componentes reciben contenido de los arrays locales. La interacción modific
 - Los datos de los casos incluyen textos extensos, pero la ruta de detalle solo renderiza una imagen.
 - Siete experiencias están definidas; el agrupamiento actual solo muestra las primeras seis.
 - El estado Redux, un provider global y un reducer global son esqueletos sin uso funcional.
-- No hay pruebas automatizadas de producto configuradas ni resultados de rendimiento o accesibilidad medidos en esta revisión.
+- Hay pruebas automatizadas del destino de proyectos en `tests/project-view.test.cjs`, ejecutables con Node.js y la dependencia TypeScript local. No hay una auditoría integral de rendimiento o accesibilidad.
 
 Fuentes principales: [página principal](../../src/app/(pages)/page.tsx), [layout](../../src/app/layout.tsx), [datos](../../src/app/(pages)/home/_data/portfolio.data.ts), [package.json](../../package.json). Los detalles y sus escenarios se distribuyen en las guías siguientes.

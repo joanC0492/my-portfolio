@@ -1,6 +1,6 @@
 # Mantenimiento de la documentación y verificación
 
-**Última revisión:** 2026-09-14.
+**Última revisión:** 2026-09-15.
 
 ## Regla de trabajo
 
@@ -54,7 +54,7 @@ Para cambios de aplicación, usar `npm run lint`, comprobación de tipos o `npm 
 
 Los escenarios manuales relevantes incluyen navegación móvil y de escritorio, cambio de tema, apertura y navegación circular del carrusel, enlaces internos y externos, un slug válido, uno inexistente, CV, robots y sitemap. Comprobar solamente los afectados por la entrega, ampliando si aparecen fallos o incertidumbres.
 
-## Registro de esta revisión
+## Registro de la revisión documental inicial (2026-09-14)
 
 El análisis se realizó sobre los archivos locales el 2026-09-14, con cambios previos preparados y sin preparar en Git. No se toma como evidencia de un despliegue en producción.
 
@@ -67,3 +67,14 @@ El análisis se realizó sobre los archivos locales el 2026-09-14, con cambios p
 - `git diff --check -- README.md` terminó sin errores de espacios. Las guías nuevas se comprobaron también directamente, ya que los archivos sin seguimiento no aparecen en ese diff.
 
 No se ejecutaron build, lint, pruebas de navegador, auditorías Lighthouse ni validaciones de despliegue como parte de este análisis documental. Tampoco se comprobó la disponibilidad de los enlaces externos ni el contenido visual de imágenes/PDFs. Los resultados de pruebas citados en el plan anterior son históricos y no se atribuyen a esta entrega.
+
+## Implementación de destinos manuales (2026-09-15)
+
+- `viewMode` elige el destino de cada proyecto; `pageImage` conecta capturas completas con dimensiones reales. La tarjeta y el modal comparten `getProjectUrl`.
+- Las pruebas de regresión se ejecutan con `node --test tests/project-view.test.cjs`; cubren independencia de categoría, prioridad de URL y omisión de configuraciones incompletas. No requieren paquetes nuevos.
+- Al agregar o modificar una captura, comprobar su existencia local y que `width`/`height` coincidan con el archivo. La función cliente no consulta el sistema de archivos ni comprueba disponibilidad por red.
+- Se verificaron en navegador las nueve páginas internas a 1365 px y 390 px: imágenes cargadas, proporción correcta y ausencia de desbordamiento horizontal en las 18 vistas.
+- Se contrastaron los 17 destinos de tarjetas y los enlaces del modal de MoveMyBike y Spaciuz: conservan sus destinos y la apertura en otra pestaña.
+- La ruta interna de MoveMyBike sigue mostrando su portada y conserva canonical, sin header ni footer. No se cambió su enlace externo.
+
+Los resultados finales de compilación y revisión se registran al cerrar la implementación. El trabajo comenzó desde un árbol limpio en el commit `2a9312c`, que ya contenía los cambios previos del propietario.

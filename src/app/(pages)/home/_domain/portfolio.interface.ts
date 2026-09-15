@@ -25,12 +25,20 @@ export interface IDataSkills {
   skills: ISkills[];
 }
 
+export interface IProjectPageImage {
+  src: string;
+  width: number;
+  height: number;
+}
+
 export interface IDataProjects {
   id: number;
   company: string;
   stack: string;
   img: string;
   link: string;
+  viewMode: "external" | "image";
+  pageImage?: IProjectPageImage;
   pageLink?: string;
   description: string;
   type?: "case-study" | "project";

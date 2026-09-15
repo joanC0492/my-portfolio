@@ -1,6 +1,6 @@
 # Configuración, estilos y ejecución
 
-**Última revisión:** 2026-09-14.
+**Última revisión:** 2026-09-15.
 
 ## Dependencias y comandos
 
@@ -17,7 +17,7 @@ No hay `engines`, `packageManager`, Dockerfile ni pipeline de CI propios en los 
 | `npm run lint` | `next lint` |
 | `npx --no-install tsc --noEmit` | Comprobación adicional de tipos usando la dependencia local; no es un script propio |
 
-No se ha definido `npm test` ni un framework de pruebas del producto. La ruta del repositorio dentro de XAMPP no implica que esta aplicación utilice PHP o se sirva solo con Apache; los comandos configurados ejecutan Next.js.
+Las pruebas del destino se ejecutan con `node --test tests/project-view.test.cjs`. Usan el runner nativo de Node.js y TypeScript ya instalado, sin dependencias nuevas. No se ha definido un script `npm test` ni se ha añadido un framework externo de pruebas. La ruta del repositorio dentro de XAMPP no implica que esta aplicación utilice PHP o se sirva solo con Apache; los comandos configurados ejecutan Next.js.
 
 ## Variable de entorno `SITE_URL`
 

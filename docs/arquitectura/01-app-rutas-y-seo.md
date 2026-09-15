@@ -1,6 +1,6 @@
 # `src/app`: rutas, layout y SEO
 
-**Última revisión:** 2026-09-14.
+**Última revisión:** 2026-09-15.
 
 ## Responsabilidad y archivos
 
@@ -32,7 +32,7 @@ El orden es `UIProvider → ChangeThemeProvider → children`. La plantilla visu
 
 `generateStaticParams` devuelve los 15 slugs actualmente definidos. No filtra por `type` o `featured`. Los proyectos sin `pageLink` no generan parámetros ni entradas de sitemap. No existe una página de índice `/portafolio` en el árbol actual.
 
-La imagen visible del detalle se elige con `heroImage || coverImage || img`. Se renderiza con `next/image`, dimensiones declaradas 1920 × 1080 y clases para ocupar el ancho. El `alt` usa `alt || title || company`. No hay renderer de Markdown, galería, narración del caso ni navegación de regreso implementados en esa página.
+La imagen visible prioriza `pageImage` cuando su configuración es válida: usa su `src`, `width` y `height` reales. Las nueve páginas enlazadas en modo `image` utilizan capturas completas de `projects-page/`. Sin `pageImage` válida, se conserva `heroImage || coverImage || img` con las dimensiones declaradas anteriores de 1920 × 1080. Se renderiza con `next/image`, `sizes="100vw"` y `block w-full h-auto`: ocupa el ancho disponible, conserva la proporción y permite scroll vertical sin recorte ni proporción 16:9 forzada. El `alt` usa `alt || title || company`. No hay renderer de Markdown, galería, narración del caso ni navegación de regreso implementados en esa página.
 
 ## Metadata
 
@@ -48,7 +48,7 @@ Para un proyecto existente, `generateMetadata` utiliza:
 - Imagen social: `coverImage || heroImage || img`, con dimensiones declaradas 1200 × 675.
 - Open Graph de tipo `article` y tarjeta grande de Twitter.
 
-La prioridad de imágenes sociales es distinta de la imagen visible del detalle. Las descripciones de proyectos anteriores pueden contener HTML; esta función no elimina esas etiquetas antes de utilizarlas como metadata.
+`pageImage` no modifica las imágenes sociales ni canonical, metadata o generación de slugs. La prioridad de imágenes sociales es distinta de la imagen visible del detalle. Las descripciones de proyectos anteriores pueden contener HTML; esta función no elimina esas etiquetas antes de utilizarlas como metadata.
 
 Para un slug inexistente, se devuelve metadata de proyecto no encontrado con `index: false` y `follow: false`, además del `notFound()` de la página. No se implementa JSON-LD.
 

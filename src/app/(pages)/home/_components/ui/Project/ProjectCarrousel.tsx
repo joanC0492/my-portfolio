@@ -4,6 +4,7 @@ import { RxCross2 } from "react-icons/rx";
 import { useUIContext } from "@/store/context/ui/UIContext";
 import Image from "next/image";
 import { dataProjects } from "../../../_data";
+import { getProjectUrl } from "../../../_domain/project-view";
 import { ButtonPrimary } from "@/shared/components/ui/Buttons/ButtonPrimary";
 
 export const ProjectCarrousel = () => {
@@ -32,12 +33,7 @@ export const ProjectCarrousel = () => {
     [index]
   );
 
-  const projectUrl =
-    project.type === "case-study"
-      ? project.publicUrl || project.link
-      : project.pageLink
-      ? `/portafolio/${project.pageLink}`
-      : project.link;
+  const projectUrl = getProjectUrl(project);
 
   return (
     <>
@@ -64,12 +60,13 @@ export const ProjectCarrousel = () => {
                   dangerouslySetInnerHTML={{ __html: project.description }}
                 />
               )}
-              <ButtonPrimary
-                href={projectUrl}
-                text="VER PROYECTO"
-                className=""
-                target="_blank"
-              />
+              {projectUrl && (
+                <ButtonPrimary
+                  href={projectUrl}
+                  text="VER PROYECTO"
+                  target="_blank"
+                />
+              )}
             </div>
           </div>
 

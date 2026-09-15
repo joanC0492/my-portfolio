@@ -1,6 +1,6 @@
 # `home/_components`: secciones e interacción
 
-**Última revisión:** 2026-09-14. **Carpeta:** `src/app/(pages)/home/_components/`.
+**Última revisión:** 2026-09-15. **Carpeta:** `src/app/(pages)/home/_components/`.
 
 ## Secciones
 
@@ -45,21 +45,21 @@ const legacyProjects = dataProjects.filter(
 
 Actualmente aparecen seis casos destacados y once proyectos anteriores. Ambos grupos se muestran directamente, sin un control para expandir u ocultar «Otros proyectos». Un caso de estudio con `featured: false` o sin `featured` no aparecería en ninguno de los dos grupos, aunque seguiría dentro de los datos, el carrusel y, si tiene slug, las rutas.
 
-[ProjectList.tsx](../../src/app/(pages)/home/_components/ui/Project/ProjectList.tsx) aporta una rejilla. [ProjectItem.tsx](../../src/app/(pages)/home/_components/ui/Project/ProjectItem.tsx) presenta `img`, aplica un overlay al pasar el puntero y convierte `stack`, separado por `|`, en etiquetas. Para casos muestra empresa y `title || company`; para los demás, empresa. Recibe `summary` y `description`, pero actualmente no los renderiza en la tarjeta.
+[ProjectList.tsx](../../src/app/(pages)/home/_components/ui/Project/ProjectList.tsx) aporta una rejilla. [ProjectItem.tsx](../../src/app/(pages)/home/_components/ui/Project/ProjectItem.tsx) presenta `img`, aplica un overlay al pasar el puntero y convierte `stack`, separado por `|`, en etiquetas. Para casos muestra empresa y `title || company`; para los demás, empresa. La tarjeta no renderiza `summary` ni `description`.
 
 La tarjeta tiene un botón para abrir detalles y un enlace para visitar el proyecto, ambos con `aria-label`. Al abrir detalles, primero guarda `id` en Context y luego abre el modal.
 
 ## Enlaces y carrusel
 
-La tarjeta y [ProjectCarrousel.tsx](../../src/app/(pages)/home/_components/ui/Project/ProjectCarrousel.tsx) resuelven el enlace de la misma manera:
+La tarjeta y [ProjectCarrousel.tsx](../../src/app/(pages)/home/_components/ui/Project/ProjectCarrousel.tsx) llaman a la misma función `getProjectUrl` de [project-view.ts](../../src/app/(pages)/home/_domain/project-view.ts). La elección es manual e independiente de `type` y `featured`:
 
 | Condición | Destino |
 | --- | --- |
-| `type === "case-study"` | `publicUrl \|\| link`, normalmente el sitio externo |
-| Otro proyecto con `pageLink` | `/portafolio/<pageLink>` |
-| Otro proyecto sin `pageLink` | `link` |
+| `viewMode === "external"` | `publicUrl \|\| link`, si es una URL absoluta HTTP/HTTPS válida |
+| `viewMode === "image"` | `/portafolio/<pageLink>`, si hay slug y `pageImage` válida |
+| Configuración incompleta o modo ausente | Omite el enlace de tarjeta y el botón «VER PROYECTO»; el botón de detalles sigue disponible |
 
-Los enlaces se abren en otra pestaña. La existencia de un slug de caso de estudio no hace que su tarjeta enlace a la página interna: el caso mantiene prioridad por la URL pública.
+Los enlaces conservan `target="_blank"` y `rel="noopener noreferrer"`. No se cambia silenciosamente de modo si falta configuración y no se comprueba si una web externa está caída. Actualmente hay ocho destinos externos y nueve internos. Un caso destacado puede elegir `image`, y un proyecto anterior puede elegir `external`, sin cambiar su clasificación.
 
 El carrusel se monta condicionalmente desde `TemplateMain`. Muestra `img`, stack, empresa, descripción y «VER PROYECTO». Renderiza `description` como HTML mediante `dangerouslySetInnerHTML`; no procesa Markdown ni los campos extensos del caso.
 

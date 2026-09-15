@@ -194,6 +194,7 @@ export const dataResumes: IResume[] = [
 export const dataProjects: IDataProjects[] = [
   {
     id: 11,
+    viewMode: "external",
     company: "MoveMyBike",
     stack: "WORDPRESS | JAVASCRIPT | GRAVITY FORMS | GOOGLE ADS",
     img: "/images/portfolio/case-studies/movemybike-cover-1200x675.webp",
@@ -227,6 +228,7 @@ export const dataProjects: IDataProjects[] = [
   },
   {
     id: 12,
+    viewMode: "external",
     company: "H&H Classics",
     stack: "WORDPRESS | PHP | JAVASCRIPT | AJAX",
     img: "/images/portfolio/case-studies/handh-classics-cover-1200x675.webp",
@@ -262,6 +264,7 @@ export const dataProjects: IDataProjects[] = [
   },
   {
     id: 13,
+    viewMode: "external",
     company: "My Chef Steph",
     stack: "WORDPRESS | WOOCOMMERCE | PHP | MAILCHIMP",
     img: "/images/portfolio/case-studies/my-chef-steph-cover-1200x675.webp",
@@ -300,6 +303,7 @@ export const dataProjects: IDataProjects[] = [
   },
   {
     id: 14,
+    viewMode: "external",
     company: "Veblen",
     stack: "WORDPRESS | PHP | AJAX | WP_QUERY",
     img: "/images/portfolio/case-studies/veblen-cover-1200x675.webp",
@@ -337,6 +341,7 @@ export const dataProjects: IDataProjects[] = [
   },
   {
     id: 15,
+    viewMode: "external",
     company: "Offitravel",
     stack: "WORDPRESS | WOOCOMMERCE | STRIPE | JAVASCRIPT",
     img: "/images/portfolio/case-studies/offitravel-cover-1200x675.webp",
@@ -374,6 +379,7 @@ export const dataProjects: IDataProjects[] = [
   },
   {
     id: 16,
+    viewMode: "external",
     company: "Tokenovate",
     stack: "WORDPRESS | PHP | REDIRECCIONES | BROWSERSTACK",
     img: "/images/portfolio/case-studies/tokenovate-cover-1200x675.webp",
@@ -411,6 +417,12 @@ export const dataProjects: IDataProjects[] = [
   },
   {
     id: 0,
+    viewMode: "image",
+    pageImage: {
+      src: "/images/portfolio/projects-page/tiosaji.webp",
+      width: 1360,
+      height: 5404,
+    },
     company: "Tío Saji",
     stack: "SHOPIFY | LIQUID | HTML | CSS | JS",
     img: "/images/portfolio/projects/project-tio-saji.webp",
@@ -423,6 +435,12 @@ export const dataProjects: IDataProjects[] = [
   },
   {
     id: 1,
+    viewMode: "image",
+    pageImage: {
+      src: "/images/portfolio/projects-page/solgas.webp",
+      width: 1360,
+      height: 1496,
+    },
     company: "Solgas",
     stack: "NEXT.JS | LARAVEL | TAILWIND | SQL SERVER",
     img: "/images/portfolio/projects/project-solgas.webp",
@@ -437,6 +455,12 @@ export const dataProjects: IDataProjects[] = [
   },
   {
     id: 2,
+    viewMode: "image",
+    pageImage: {
+      src: "/images/portfolio/projects-page/dreduardoflorescirugia.webp",
+      width: 1826,
+      height: 5436,
+    },
     company: "Dr. Manuel Eduardo Flores Vilchez",
     stack: "WORDPRESS | HTML | CSS | JS",
     img: "/images/portfolio/projects/project-dreduardoflorescirugia.webp",
@@ -452,6 +476,12 @@ export const dataProjects: IDataProjects[] = [
   },
   {
     id: 3,
+    viewMode: "image",
+    pageImage: {
+      src: "/images/portfolio/projects-page/spaciuz.webp",
+      width: 1826,
+      height: 2620,
+    },
     company: "Spaciuz",
     stack: "WORDPRESS | HTML | CSS | JS",
     img: "/images/portfolio/projects/project-spaciuz.webp",
@@ -467,6 +497,12 @@ export const dataProjects: IDataProjects[] = [
   },
   {
     id: 4,
+    viewMode: "image",
+    pageImage: {
+      src: "/images/portfolio/projects-page/the-unconference-23.webp",
+      width: 1440,
+      height: 8102,
+    },
     company: "Colectivo23",
     stack: "HubSpot CMS | HTML | CSS | JS",
     img: "/images/portfolio/projects/project-the-unconference.webp",
@@ -478,6 +514,12 @@ export const dataProjects: IDataProjects[] = [
   },
   {
     id: 5,
+    viewMode: "image",
+    pageImage: {
+      src: "/images/portfolio/projects-page/movistar.webp",
+      width: 1360,
+      height: 6519,
+    },
     company: "Movistar",
     stack: "HTML | CSS | JS | GA | OPTIMIZE | GTM",
     img: "/images/portfolio/projects/project-movistar.webp",
@@ -493,6 +535,12 @@ export const dataProjects: IDataProjects[] = [
   },
   {
     id: 6,
+    viewMode: "image",
+    pageImage: {
+      src: "/images/portfolio/projects-page/entel.webp",
+      width: 1360,
+      height: 6528,
+    },
     company: "Entel Empresas",
     stack: "WORDPRESS | HTML | PUG | CSS | SCSS | JS",
     img: "/images/portfolio/projects/project-entel-empresas.webp",
@@ -508,6 +556,7 @@ export const dataProjects: IDataProjects[] = [
   },
   {
     id: 7,
+    viewMode: "external",
     company: "Innovación Digital",
     stack: "WORDPRESS | HTML | CSS | JS",
     img: "/images/portfolio/projects/project-innovacion-digital.webp",
@@ -519,6 +568,7 @@ export const dataProjects: IDataProjects[] = [
   },
   {
     id: 8,
+    viewMode: "external",
     company: "Exsa",
     stack: "LARAVEL | HTML | CSS | JS",
     img: "/images/portfolio/projects/project-exsa.webp",
@@ -527,6 +577,12 @@ export const dataProjects: IDataProjects[] = [
   },
   {
     id: 9,
+    viewMode: "image",
+    pageImage: {
+      src: "/images/portfolio/projects-page/infopesa.webp",
+      width: 1360,
+      height: 1182,
+    },
     company: "Infopesa",
     stack: "LARAVEL | HTML | CSS | JS | VUE",
     img: "/images/portfolio/projects/project-infopesa.webp",
@@ -536,6 +592,12 @@ export const dataProjects: IDataProjects[] = [
   },
   {
     id: 10,
+    viewMode: "image",
+    pageImage: {
+      src: "/images/portfolio/projects-page/vinas-de-oro.webp",
+      width: 1360,
+      height: 3208,
+    },
     company: "Pisco Viñas de Oro",
     stack: "NextJs | TS | Tailwindcss | WordPress | GraphQL",
     img: "/images/portfolio/projects/project-vinas-de-oro.webp",
