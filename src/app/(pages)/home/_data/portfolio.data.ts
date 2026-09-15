@@ -199,6 +199,7 @@ export const dataProjects: IDataProjects[] = [
     stack: "WORDPRESS | JAVASCRIPT | GRAVITY FORMS | GOOGLE ADS",
     img: "/images/portfolio/case-studies/movemybike-cover-1200x675.webp",
     link: "https://movemybike.co.uk/",
+    // Enlace a la página del caso de estudio
     pageLink: "movemybike-conversiones-gravity-forms",
     description:
       "Corregí el seguimiento de conversiones de Google Ads en dos formularios de Gravity Forms, asegurando que cada envío exitoso ejecutara la conversión correspondiente.",
@@ -264,7 +265,12 @@ export const dataProjects: IDataProjects[] = [
   },
   {
     id: 13,
-    viewMode: "external",
+    viewMode: "image",
+    pageImage: {
+      src: "/images/portfolio/projects-page/my-chef-_steph.webp",
+      width: 3840,
+      height: 14154,
+    },
     company: "My Chef Steph",
     stack: "WORDPRESS | WOOCOMMERCE | PHP | MAILCHIMP",
     img: "/images/portfolio/case-studies/my-chef-steph-cover-1200x675.webp",
@@ -303,7 +309,12 @@ export const dataProjects: IDataProjects[] = [
   },
   {
     id: 14,
-    viewMode: "external",
+    viewMode: "image",
+    pageImage: {
+      src: "/images/portfolio/projects-page/veblen-home-page.jpg",
+      width: 3840,
+      height: 20672,
+    },
     company: "Veblen",
     stack: "WORDPRESS | PHP | AJAX | WP_QUERY",
     img: "/images/portfolio/case-studies/veblen-cover-1200x675.webp",

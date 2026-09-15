@@ -43,7 +43,16 @@ No hay un campo `year` en la interfaz actual. `heroImage` está definido como po
 
 ## Inventario de proyectos y slugs
 
-Los seis casos destacados, Innovación Digital y Exsa usan `viewMode: "external"` (ocho). Los otros nueve proyectos usan `viewMode: "image"`, con `pageImage` apuntando a sus capturas completas existentes. Las tarjetas conservan `img`; las imágenes sociales conservan `coverImage`/`heroImage`/`img`.
+MoveMyBike, H&H Classics, Offitravel, Tokenovate, Innovación Digital y Exsa usan `viewMode: "external"` (seis). Los otros nueve proyectos anteriores, además de My Chef Steph y Veblen, usan `viewMode: "image"` (once). Las tarjetas conservan `img`; las imágenes sociales conservan `coverImage`/`heroImage`/`img`.
+
+Los dos casos destacados nuevos en modo imagen conservan sus slugs y URL públicas, pero el destino de la tarjeta y del modal es su captura interna:
+
+| Proyecto | `pageLink` | `pageImage.src` | Dimensiones declaradas | Dimensiones del archivo |
+| --- | --- | --- | --- | --- |
+| My Chef Steph | `my-chef-steph-gift-cards-mailchimp` | `/images/portfolio/projects-page/my-chef-_steph.webp` | 3840 × 14154 | 3840 × 14154 |
+| Veblen | `veblen-vacantes-active-placed` | `/images/portfolio/projects-page/veblen-home-page.jpg` | 3840 × 20672 | 3840 × 20672 |
+
+El validador acepta ambas configuraciones porque las dimensiones son enteras positivas, pero no lee el archivo. Sus valores fueron medidos y coinciden con los recursos actuales; al sustituir una captura hay que actualizar las medidas en el mismo cambio.
 
 | ID | Proyecto | `pageLink` |
 | --- | --- | --- |

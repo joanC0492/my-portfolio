@@ -32,7 +32,7 @@ El orden es `UIProvider → ChangeThemeProvider → children`. La plantilla visu
 
 `generateStaticParams` devuelve los 15 slugs actualmente definidos. No filtra por `type` o `featured`. Los proyectos sin `pageLink` no generan parámetros ni entradas de sitemap. No existe una página de índice `/portafolio` en el árbol actual.
 
-La imagen visible prioriza `pageImage` cuando su configuración es válida: usa su `src`, `width` y `height` reales. Las nueve páginas enlazadas en modo `image` utilizan capturas completas de `projects-page/`. Sin `pageImage` válida, se conserva `heroImage || coverImage || img` con las dimensiones declaradas anteriores de 1920 × 1080. Se renderiza con `next/image`, `sizes="100vw"` y `block w-full h-auto`: ocupa el ancho disponible, conserva la proporción y permite scroll vertical sin recorte ni proporción 16:9 forzada. El `alt` usa `alt || title || company`. No hay renderer de Markdown, galería, narración del caso ni navegación de regreso implementados en esa página.
+La imagen visible prioriza `pageImage` cuando su configuración es válida: usa su `src`, `width` y `height` declarados, que coinciden con las dimensiones físicas de las once capturas actuales. Sin `pageImage` válida, se conserva `heroImage || coverImage || img` con las dimensiones declaradas anteriores de 1920 × 1080. Se renderiza con `next/image`, `sizes="100vw"` y `block w-full h-auto`: ocupa el ancho disponible, conserva la proporción original y permite scroll vertical sin recorte ni proporción 16:9 forzada. El `alt` usa `alt || title || company`. No hay renderer de Markdown, galería, narración del caso ni navegación de regreso implementados en esa página.
 
 ## Metadata
 

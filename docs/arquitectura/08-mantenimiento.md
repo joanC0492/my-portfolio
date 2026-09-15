@@ -77,4 +77,21 @@ No se ejecutaron build, lint, pruebas de navegador, auditorías Lighthouse ni va
 - Se contrastaron los 17 destinos de tarjetas y los enlaces del modal de MoveMyBike y Spaciuz: conservan sus destinos y la apertura en otra pestaña.
 - La ruta interna de MoveMyBike sigue mostrando su portada y conserva canonical, sin header ni footer. No se cambió su enlace externo.
 
-Los resultados finales de compilación y revisión se registran al cerrar la implementación. El trabajo comenzó desde un árbol limpio en el commit `2a9312c`, que ya contenía los cambios previos del propietario.
+La verificación final de esta implementación terminó con estos resultados:
+
+- `node --test tests/project-view.test.cjs`: 18 pruebas aprobadas y 0 fallos.
+- `npx --no-install tsc --noEmit`: sin errores de tipos.
+- `npm run lint`: finalizó correctamente; conserva la advertencia previa de `react-hooks/exhaustive-deps` en `src/shared/hooks/useScrollSpy.tsx:40`.
+- `SITE_URL=http://localhost:3000 npm run build`: compilación correcta y 22 páginas estáticas generadas. También informa la advertencia previa de `useScrollSpy.tsx` y que la base local de Browserslist está desactualizada.
+- Playwright comprobó 17 enlaces de tarjeta —ocho externos y nueve internos—, la coincidencia entre tarjeta y modal para MoveMyBike y Spaciuz, y las nueve capturas a 1365 px y 390 px. Las 18 vistas cargaron una única imagen completa, sin header, footer, texto visible ni desbordamiento horizontal.
+- La ruta interna existente de MoveMyBike mantuvo su portada y canonical; un slug desconocido respondió con 404.
+
+El trabajo comenzó desde un árbol limpio en el commit `2a9312c`, que ya contenía los cambios previos del propietario.
+
+## Cambios locales posteriores revisados (2026-09-15)
+
+- `HomeHero` ahora enlaza el botón de CV a `/docs/curriculum-joan-omar-cochachi-chiuyari-2026.pdf?v=1`; el PDF correspondiente existe en `public/docs/`.
+- My Chef Steph y Veblen cambiaron de `viewMode: "external"` a `viewMode: "image"`; el total actual es de seis destinos externos y once internos.
+- Se añadieron `my-chef-_steph.webp` y `veblen-home-page.jpg` en `public/images/portfolio/projects-page/`. Sus dimensiones físicas se midieron como 3840 × 14154 px y 3840 × 20672 px, respectivamente.
+- Los objetos `pageImage` de ambos proyectos se corrigieron con sus dimensiones físicas medidas. Las guías de datos, rutas y recursos reflejan ahora la proporción original; las verificaciones de nueve capturas y ocho enlaces externos de la sección anterior no cubren estos dos destinos internos posteriores.
+- Se revisaron las rutas locales de los Markdown y la correspondencia entre los datos, el hero y los recursos añadidos. No se modificó el código ni los recursos proporcionados por el propietario durante esta actualización documental.

@@ -14,7 +14,7 @@ La [página principal](../../src/app/(pages)/page.tsx) fija el orden y los IDs. 
 | [HomeProjects](../../src/app/(pages)/home/_components/sections/HomeProjects.tsx) | `portfolio` | Dos grupos de tarjetas derivados de `dataProjects` |
 | [HomeContact](../../src/app/(pages)/home/_components/sections/HomeContact.tsx) | `contact` | Disponibilidad y enlaces de correo, LinkedIn y GitHub |
 
-Los textos de presentación están directamente en las secciones. Contacto no contiene un formulario ni envía mensajes desde el servidor. El enlace del CV abre `/docs/cvcochachi2025.pdf?v=4` en otra pestaña; el botón no utiliza el atributo HTML `download`.
+Los textos de presentación están directamente en las secciones. Contacto no contiene un formulario ni envía mensajes desde el servidor. El enlace del CV abre `/docs/curriculum-joan-omar-cochachi-chiuyari-2026.pdf?v=1` en otra pestaña; el botón no utiliza el atributo HTML `download`.
 
 `HomeAbout` considera principales las primeras dos categorías mediante `slice(0, 2)`; las restantes son complementarias. La imagen de laptop está declarada, pero tiene la clase `hidden`. Las habilidades se muestran como etiquetas, sin porcentajes ni barras.
 
@@ -59,7 +59,7 @@ La tarjeta y [ProjectCarrousel.tsx](../../src/app/(pages)/home/_components/ui/Pr
 | `viewMode === "image"` | `/portafolio/<pageLink>`, si hay slug y `pageImage` válida |
 | Configuración incompleta o modo ausente | Omite el enlace de tarjeta y el botón «VER PROYECTO»; el botón de detalles sigue disponible |
 
-Los enlaces conservan `target="_blank"` y `rel="noopener noreferrer"`. No se cambia silenciosamente de modo si falta configuración y no se comprueba si una web externa está caída. Actualmente hay ocho destinos externos y nueve internos. Un caso destacado puede elegir `image`, y un proyecto anterior puede elegir `external`, sin cambiar su clasificación.
+Los enlaces conservan `target="_blank"` y `rel="noopener noreferrer"`. No se cambia silenciosamente de modo si falta configuración y no se comprueba si una web externa está caída. Actualmente hay seis destinos externos y once internos: My Chef Steph y Veblen son casos destacados configurados en modo `image`. Un caso destacado puede elegir `image`, y un proyecto anterior puede elegir `external`, sin cambiar su clasificación.
 
 El carrusel se monta condicionalmente desde `TemplateMain`. Muestra `img`, stack, empresa, descripción y «VER PROYECTO». Renderiza `description` como HTML mediante `dangerouslySetInnerHTML`; no procesa Markdown ni los campos extensos del caso.
 
