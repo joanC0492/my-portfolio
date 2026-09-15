@@ -8,6 +8,16 @@ interface IProps {
 }
 export const ButtonToggleSideBar = ({ className = "" }: IProps) => {
   const { sideMenuOpen, openSideMenu, closeSideMenu } = useUIContext();
+
+  const handleToggleMenu = () => {
+    if (sideMenuOpen) {
+      closeSideMenu();
+      return;
+    }
+
+    openSideMenu();
+  };
+
   return (
     <button
       className={cn(
@@ -16,15 +26,12 @@ export const ButtonToggleSideBar = ({ className = "" }: IProps) => {
         "lg:hidden",
         className
       )}
+      type="button"
+      aria-label={sideMenuOpen ? "Cerrar menú" : "Abrir menú"}
+      onClick={handleToggleMenu}
     >
-      <RxHamburgerMenu
-        className={`text-2xl ${sideMenuOpen ? "hidden" : ""}`}
-        onClick={openSideMenu}
-      />
-      <RxCross2
-        className={`text-2xl text-white ${sideMenuOpen ? "" : "hidden"}`}
-        onClick={closeSideMenu}
-      />
+      <RxHamburgerMenu className={`text-2xl ${sideMenuOpen ? "hidden" : ""}`} />
+      <RxCross2 className={`text-2xl text-white ${sideMenuOpen ? "" : "hidden"}`} />
     </button>
   );
 };

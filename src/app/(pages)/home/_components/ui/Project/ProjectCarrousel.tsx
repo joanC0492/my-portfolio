@@ -14,16 +14,30 @@ export const ProjectCarrousel = () => {
   } = useUIContext();
 
   const handleClickButton = (increment: number) => () => {
-    let indexActive: number = index + increment;
-    if (indexActive < 0) indexActive = dataProjects.length - 1;
-    if (indexActive > dataProjects.length - 1) indexActive = 0;
-    changeProjectIndexActive(indexActive);
+    const currentArrayIndex = dataProjects.findIndex(
+      (project) => project.id === index
+    );
+
+    if (currentArrayIndex === -1) return;
+
+    let nextArrayIndex = currentArrayIndex + increment;
+    if (nextArrayIndex < 0) nextArrayIndex = dataProjects.length - 1;
+    if (nextArrayIndex > dataProjects.length - 1) nextArrayIndex = 0;
+
+    changeProjectIndexActive(dataProjects[nextArrayIndex].id);
   };
 
   const project = useMemo(
     () => dataProjects.find((proj) => proj.id === index)!,
     [index]
   );
+
+  const projectUrl =
+    project.type === "case-study"
+      ? project.publicUrl || project.link
+      : project.pageLink
+      ? `/portafolio/${project.pageLink}`
+      : project.link;
 
   return (
     <>
@@ -51,11 +65,7 @@ export const ProjectCarrousel = () => {
                 />
               )}
               <ButtonPrimary
-                href={
-                  project.pageLink
-                    ? `/portafolio/${project.pageLink}`
-                    : project.link
-                }
+                href={projectUrl}
                 text="VER PROYECTO"
                 className=""
                 target="_blank"

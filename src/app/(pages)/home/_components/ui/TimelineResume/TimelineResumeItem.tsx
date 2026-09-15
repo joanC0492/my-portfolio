@@ -48,7 +48,7 @@ export const TimelineResumeItem = ({
         )}
       >
         {experienceList.map((item, i) => (
-          <li key={i} className="">
+          <li key={i} className="mb-2 last:mb-0">
             <span
               className=""
               dangerouslySetInnerHTML={{

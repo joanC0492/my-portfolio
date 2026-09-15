@@ -12,8 +12,27 @@ export const ProjectItem = ({
   img,
   link,
   pageLink,
+  type,
+  publicUrl,
+  title,
+  summary,
+  description,
+  alt,
 }: IDataProjects) => {
   const { openModalCarrousel, changeProjectIndexActive } = useUIContext();
+  const isCaseStudy = type === "case-study";
+  const caseTitle = title || company;
+  const stackItems = stack
+    .split("|")
+    .map((item) => item.trim())
+    .filter(Boolean);
+
+  const projectUrl =
+    type === "case-study"
+      ? publicUrl || link
+      : pageLink
+      ? `/portafolio/${pageLink}`
+      : link;
 
   const handleCarrousel = () => {
     changeProjectIndexActive(id);
@@ -35,7 +54,7 @@ export const ProjectItem = ({
         src={img}
         width={439}
         height={352}
-        alt="Blog"
+        alt={alt || company}
         className={cn(
           "rounded-t-lg w-full h-full object-cover object-top aspect-video transition-all duration-[250ms]",
           "group-hover:scale-125"
@@ -47,17 +66,37 @@ export const ProjectItem = ({
           "group-hover:scale-100 group-hover:opacity-100"
         )}
       >
-        <div className="text-center text-jc-dark-1">
-          <p className="text-xl font-raleway font-bold">{company}</p>
-          <p className="font-open-sans font-bold text-sm">{stack}</p>
+        <div className="text-center text-jc-dark-1 px-4 sm:px-5 w-full">
+          {isCaseStudy ? (
+            <>
+              <p className="text-xl font-raleway font-bold">{company}</p>
+              <p className="text-sm font-raleway font-semibold">{caseTitle}</p>
+            </>
+          ) : (
+            <p className="text-xl font-raleway font-bold">{company}</p>
+          )}
+          <div className="mt-2 mb-2 flex flex-wrap justify-center gap-1.5 max-w-[22rem] mx-auto">
+            {stackItems.map((tech) => (
+              <span
+                key={`${company}-${tech}`}
+                className="font-open-sans text-xs font-semibold leading-relaxed px-2 py-0.5 rounded-md bg-white/60 text-jc-dark-1 border border-jc-dark-1/15 whitespace-nowrap"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
           <div className="flex items-center justify-center mt-4 gap-4">
-            <button>
-              <FaPlus className="text-xl" onClick={handleCarrousel} />
+            <button
+              onClick={handleCarrousel}
+              aria-label={`Ver detalles de ${company}`}
+            >
+              <FaPlus className="text-xl" />
             </button>
             <a
-              href={pageLink ? `/portafolio/${pageLink}` : link}
+              href={projectUrl}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`Visitar proyecto ${company}`}
             >
               <FaPaperclip className="text-xl" />
             </a>

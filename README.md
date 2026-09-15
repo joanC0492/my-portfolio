@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portafolio de Joan Cochachi
 
-## Getting Started
+Sitio personal construido con Next.js App Router, React y TypeScript. Presenta el perfil WordPress & PHP Developer, habilidades, experiencia, proyectos y enlaces de contacto. El contenido se mantiene en archivos locales del repositorio.
 
-First, run the development server:
+## Documentación del proyecto
 
-```bash
+La explicación del funcionamiento actual empieza en [el índice de arquitectura](docs/arquitectura/README.md). Está dividida por carpetas y responsabilidades, con escenarios de comportamiento y limitaciones conocidas.
+
+- [Visión general y mapa de carpetas](docs/arquitectura/00-vision-general.md).
+- [Rutas, layout y SEO](docs/arquitectura/01-app-rutas-y-seo.md).
+- [Secciones y componentes de la home](docs/arquitectura/02-home-componentes.md).
+- [Datos e interfaces](docs/arquitectura/03-home-datos-y-dominio.md).
+- [Componentes y utilidades compartidas](docs/arquitectura/04-shared.md).
+- [Estado global y tema](docs/arquitectura/05-store.md).
+- [Recursos públicos y contenido editorial](docs/arquitectura/06-public-y-contenido.md).
+- [Configuración y ejecución](docs/arquitectura/07-configuracion.md).
+- [Mantenimiento y verificación](docs/arquitectura/08-mantenimiento.md).
+
+Las instrucciones para actualizar esta documentación junto con los cambios están en [AGENTS.md](AGENTS.md).
+
+## Desarrollo local
+
+Con Node.js y npm disponibles:
+
+```powershell
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrir [el sitio local](http://localhost:3000). Sin `SITE_URL`, el código usa esa dirección para la metadata en desarrollo y emite una advertencia.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Compilación y ejecución de producción
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Definir `SITE_URL` con el dominio absoluto del entorno. Ejemplo para comprobar una compilación local en PowerShell:
 
-## Learn More
+```powershell
+$env:SITE_URL = 'http://localhost:3000'
+npm run build
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+En un despliegue real, sustituir ese valor por el dominio público. También se puede crear `.env.local` a partir de [.env.example](.env.example) y completar el valor. La compilación falla si falta `SITE_URL` en producción. La carga de fuentes usa `next/font/google`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Comprobación disponible: `npm run lint`. No hay un script `test` configurado. Consultar [la guía de configuración](docs/arquitectura/07-configuracion.md) para detalles y límites.

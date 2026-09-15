@@ -504,6 +504,23 @@ Cada checkpoint (CP) se aprueba antes de pasar al siguiente. Los que dependen de
 - **Pruebas**: build; revisión visual; verificar que las tarjetas legacy siguen funcionando; validar enlaces.
 - **Criterio de aceptación**: 6 casos destacados visibles con contenido real aprobado; 11 proyectos previos accesibles bajo "Otros proyectos"; sin datos placeholder en producción.
 
+#### CP4.1 — Extensión de interfaz de proyectos ✅ Completado
+
+- **Objetivo**: extender `IDataProjects` para soportar casos de estudio sin romper compatibilidad legacy.
+- **Archivo modificado**: [src/app/(pages)/home/_domain/portfolio.interface.ts](../src/app/(pages)/home/_domain/portfolio.interface.ts).
+- **Cambios aplicados**: `IDataProjects` fue extendida con propiedades opcionales para casos de estudio (`type`, `featured`, `title`, `summary`, `context`, `problem`, `role`, `solution`, `result`, `alt`, `coverImage`, `heroImage`, `gallery`, `publicUrl`, `technologies`) manteniendo intactas las propiedades existentes.
+- **Alcance confirmado**:
+  - no se modificó `dataProjects`.
+  - no se modificaron componentes, rutas ni imágenes.
+  - `npm run lint` y `npm run build` finalizaron correctamente.
+  - los proyectos existentes continúan compilando.
+- **Criterio de aceptación**: cumplido.
+
+#### CP4.2 — Carga de 6 casos de estudio y separación visual
+
+- **Estado**: pendiente.
+- **Objetivo**: incorporar los 6 casos WP/PHP aprobados en datos y UI, manteniendo la compatibilidad con proyectos legacy.
+
 ### CP5 — Metadata global completa
 
 - **Objetivo**: metadata SEO completa para la home.
@@ -652,6 +669,7 @@ Cada checkpoint (CP) se aprueba antes de pasar al siguiente. Los que dependen de
 - **CP1**: completado. Textos actualizados en [HomeHero.tsx](../src/app/(pages)/home/_components/sections/HomeHero.tsx), [HomeAbout.tsx](../src/app/(pages)/home/_components/sections/HomeAbout.tsx) y [HomeContact.tsx](../src/app/(pages)/home/_components/sections/HomeContact.tsx). `npm run lint` y `npm run build` finalizaron correctamente (solo warning preexistente en `useScrollSpy.tsx`, no relacionado con CP1). Enlace del CV conservado hasta CP14.
 - **CP2**: completado. **Fulltimeforce** añadido como primera experiencia en [portfolio.data.ts](../src/app/(pages)/home/_data/portfolio.data.ts) con el período confirmado **Septiembre 2025 – Julio 2026**, cargo **WordPress Developer**, bullets de responsabilidades reales y stack aprobado por el propietario. IDs del resto de experiencias re-numerados sin alterar contenidos originales. **Solo se modificó `portfolio.data.ts`**; ningún otro archivo del sitio fue tocado. `npm run lint` y `npm run build` finalizaron correctamente (solo warning preexistente en `useScrollSpy.tsx`, no relacionado con CP2).
 - **CP3**: completado. `dataSkills` reorganizado en 4 categorías (WordPress & eCommerce, Desarrollo web, Herramientas e integraciones, Tecnologías complementarias). `percentage` eliminado de datos e interfaz `ISkills`. `Skills.tsx` no requirió cambios. Archivos modificados: [portfolio.data.ts](../src/app/(pages)/home/_data/portfolio.data.ts) y [portfolio.interface.ts](../src/app/(pages)/home/_domain/portfolio.interface.ts). `npm run lint` y `npm run build` finalizaron correctamente.
-- **CP4 – CP15**: pendientes de aprobación / datos.
+- **CP4.1**: completado. `IDataProjects` extendida con propiedades opcionales para casos de estudio en [portfolio.interface.ts](../src/app/(pages)/home/_domain/portfolio.interface.ts). No se modificó `dataProjects`; no se modificaron componentes, rutas ni imágenes. `npm run lint` y `npm run build` finalizaron correctamente. Los proyectos existentes continúan compilando.
+- **CP4.2 – CP15**: pendientes de aprobación / datos.
 
 Este documento sirve como fuente de verdad del alcance. Cualquier cambio al plan se refleja aquí antes de tocar código.

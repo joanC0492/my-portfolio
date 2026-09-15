@@ -193,6 +193,223 @@ export const dataResumes: IResume[] = [
 
 export const dataProjects: IDataProjects[] = [
   {
+    id: 11,
+    company: "MoveMyBike",
+    stack: "WORDPRESS | JAVASCRIPT | GRAVITY FORMS | GOOGLE ADS",
+    img: "/images/portfolio/case-studies/movemybike-cover-1200x675.webp",
+    link: "https://movemybike.co.uk/",
+    pageLink: "movemybike-conversiones-gravity-forms",
+    description:
+      "Corregí el seguimiento de conversiones de Google Ads en dos formularios de Gravity Forms, asegurando que cada envío exitoso ejecutara la conversión correspondiente.",
+    type: "case-study",
+    featured: true,
+    title: "Seguimiento de conversiones",
+    summary:
+      "Corregí el seguimiento de conversiones de Google Ads en dos formularios de Gravity Forms, asegurando que cada envío exitoso ejecutara la conversión correspondiente.",
+    context:
+      "MoveMyBike es el sitio WordPress de una empresa del Reino Unido dedicada al transporte de motocicletas. El proyecto requería restablecer la medición de conversiones asociada a sus principales formularios de captación.",
+    problem: `El seguimiento de conversiones de Google Ads había dejado de ejecutarse correctamente en dos formularios con envío AJAX de Gravity Forms:\n\n- Contact, formulario ID 2.\n- Quick Quote, formulario ID 4.\n\nEsto impedía registrar correctamente las conversiones generadas desde estos formularios.`,
+    role: "Realicé el diagnóstico técnico e implementé la corrección dentro de un child theme de Hello Elementor, manteniendo el código personalizado separado del tema padre para facilitar su mantenimiento y evitar que se perdiera durante futuras actualizaciones.",
+    solution: `Desarrollé un archivo JavaScript específico para el seguimiento de conversiones y escuché el evento \`gform_confirmation_loaded\` después de envíos AJAX exitosos.\n\nSe configuró una conversión independiente para cada formulario:\n\n- Contact ejecuta **Contact Completion**.\n- Quick Quote ejecuta **Quote Completion** únicamente después del envío final exitoso.\n\nLa implementación se validó mediante la consola y la pestaña Network del navegador, comprobando que cada formulario enviara la conversión y el label correspondiente de Google Ads.`,
+    result:
+      "El seguimiento de conversiones volvió a ejecutarse correctamente en ambos formularios y quedó validado técnicamente mediante las herramientas del navegador.",
+    alt: "Sitio web de MoveMyBike con formularios de contacto y cotización en WordPress",
+    coverImage: "/images/portfolio/case-studies/movemybike-cover-1200x675.webp",
+    publicUrl: "https://movemybike.co.uk/",
+    technologies: [
+      "WordPress",
+      "PHP",
+      "JavaScript",
+      "Gravity Forms",
+      "Google Ads",
+      "Hello Elementor Child Theme",
+    ],
+  },
+  {
+    id: 12,
+    company: "H&H Classics",
+    stack: "WORDPRESS | PHP | JAVASCRIPT | AJAX",
+    img: "/images/portfolio/case-studies/handh-classics-cover-1200x675.webp",
+    link: "https://handh.co.uk/",
+    pageLink: "handh-classics-galeria-ajax",
+    description:
+      "Participé en la mejora de una galería de vehículos en WordPress mediante carga progresiva por AJAX y ajustes en la interacción entre imagen principal, miniaturas, slider y vista ampliada.",
+    type: "case-study",
+    featured: true,
+    title: "Galerías de vehículos",
+    summary:
+      "Participé en la mejora de una galería de vehículos en WordPress mediante carga progresiva por AJAX y ajustes en la interacción entre imagen principal, miniaturas, slider y vista ampliada.",
+    context:
+      "H&H Classics es un sitio WordPress de una casa de subastas de vehículos clásicos del Reino Unido, con un alto volumen de imágenes, fichas de vehículos y contenido multimedia.",
+    problem: `Las páginas individuales de vehículos cargaban desde el inicio galerías con decenas de imágenes, aumentando la cantidad de recursos necesarios durante la primera carga.\n\nTambién se detectaron inconsistencias en la interacción:\n\n- El zoom podía abrir una imagen diferente a la seleccionada.\n- La imagen principal podía desplazarse al slide incorrecto.\n- Existían casos de imágenes duplicadas dentro de la galería.`,
+    role: "Analicé la estructura de la galería y participé en la implementación de una carga progresiva mediante AJAX. También trabajé en ajustes de interacción entre la imagen principal, las miniaturas, el slider y el popup de vista completa.",
+    solution: `Se creó un endpoint AJAX para recuperar imágenes adicionales y un archivo JavaScript dedicado al comportamiento de la galería.\n\nTambién se realizaron ajustes en la plantilla individual de vehículos y en el popup de vista completa para mejorar la relación entre la imagen seleccionada y la vista ampliada.\n\nLa implementación permitió reducir la necesidad de solicitar todas las imágenes durante la primera carga y facilitó la realización de pruebas sobre casos de duplicación y comportamientos inconsistentes.`,
+    result:
+      "La galería quedó preparada para cargar imágenes adicionales de manera progresiva. También se aplicaron mejoras sobre la selección de imágenes y la vista ampliada, aunque el comportamiento continuó requiriendo validaciones e iteraciones en determinados escenarios.",
+    alt: "Ficha de un vehículo clásico en H&H Classics con galería de imágenes",
+    coverImage:
+      "/images/portfolio/case-studies/handh-classics-cover-1200x675.webp",
+    publicUrl: "https://handh.co.uk/",
+    technologies: [
+      "WordPress",
+      "PHP",
+      "JavaScript",
+      "AJAX",
+      "HTML",
+      "CSS",
+      "Git",
+    ],
+  },
+  {
+    id: 13,
+    company: "My Chef Steph",
+    stack: "WORDPRESS | WOOCOMMERCE | PHP | MAILCHIMP",
+    img: "/images/portfolio/case-studies/my-chef-steph-cover-1200x675.webp",
+    link: "https://mychefsteph-bqha9.projectbeta.co.uk/",
+    pageLink: "my-chef-steph-gift-cards-mailchimp",
+    description:
+      "Adapté el flujo de gift cards en WooCommerce y participé en la definición de una estructura de etiquetado en Mailchimp basada en formularios, compras e intereses del cliente.",
+    type: "case-study",
+    featured: true,
+    title: "Gift Cards y Mailchimp",
+    summary:
+      "Adapté el flujo de gift cards en WooCommerce y participé en la definición de una estructura de etiquetado en Mailchimp basada en formularios, compras e intereses del cliente.",
+    context:
+      "My Chef Steph es un sitio WordPress con WooCommerce para una marca gastronómica que ofrece comidas semanales, catering, clases de cocina, cenas especiales, gift cards y donaciones.",
+    problem: `El proyecto requería reorganizar varias funcionalidades comerciales dentro de WordPress y WooCommerce.\n\nLos principales puntos fueron:\n\n- Sustituir el sistema de gift cards basado en YITH por WooCommerce Gift Cards.\n- Configurar montos personalizados y valores predefinidos.\n- Gestionar campos adicionales como destinatario, correo, mensaje y organización benéfica.\n- Aplicar validaciones, precio dinámico y cantidad fija.\n- Definir cómo relacionar formularios de Gravity Forms con tags de Mailchimp.\n- Identificar qué tags podían automatizarse mediante compras o selecciones del formulario.\n- Documentar los casos donde todavía no existía un trigger automático claro.`,
+    role: "Participé en el análisis, desarrollo y adaptación de funcionalidades dentro de WordPress y WooCommerce. Implementé lógica PHP personalizada para las gift cards y colaboré en la definición de los flujos de formularios, compras y etiquetado en Mailchimp.",
+    solution: `Se implementó una adaptación personalizada sobre WooCommerce Gift Cards, incorporando lógica PHP para mostrar, validar y guardar los campos adicionales necesarios.\n\nTambién se configuraron:\n\n- Montos personalizados y valores predefinidos.\n- Precio dinámico.\n- Cantidad fija.\n- Una plantilla específica para la página de gift cards.\n\nPara Mailchimp, se propuso reutilizar un formulario general con el campo **Area of Interest** y asociar cada opción con el tag correspondiente.\n\nAdemás, se plantearon automatizaciones mediante eventos de WooCommerce para determinados escenarios y se documentaron los casos que requerían confirmación del cliente antes de implementarse.`,
+    result:
+      "El flujo de gift cards quedó adaptado al sistema de WooCommerce Gift Cards. También se definió una estructura clara para relacionar formularios, compras y tags de Mailchimp, dejando identificados los puntos que todavía requerían confirmación antes de su automatización.",
+    alt: "Página de gift cards de My Chef Steph en WordPress y WooCommerce",
+    coverImage:
+      "/images/portfolio/case-studies/my-chef-steph-cover-1200x675.webp",
+    publicUrl: "https://mychefsteph-bqha9.projectbeta.co.uk/",
+    technologies: [
+      "WordPress",
+      "WooCommerce",
+      "PHP",
+      "JavaScript",
+      "Gravity Forms",
+      "Mailchimp",
+      "WooCommerce Gift Cards",
+      "HTML",
+      "CSS",
+      "Git",
+    ],
+  },
+  {
+    id: 14,
+    company: "Veblen",
+    stack: "WORDPRESS | PHP | AJAX | WP_QUERY",
+    img: "/images/portfolio/case-studies/veblen-cover-1200x675.webp",
+    link: "https://veblen-int.com/",
+    pageLink: "veblen-vacantes-active-placed",
+    description:
+      "Analicé y definí una solución para separar correctamente vacantes Active y Placed, alineando consultas PHP, filtros, paginación y peticiones AJAX con el sistema vigente.",
+    type: "case-study",
+    featured: true,
+    title: "Gestión de vacantes",
+    summary:
+      "Analicé y definí una solución para separar correctamente vacantes Active y Placed, alineando consultas PHP, filtros, paginación y peticiones AJAX con el sistema vigente.",
+    context:
+      "Veblen es un sitio WordPress de una empresa de reclutamiento que gestiona sus vacantes mediante un custom post type y una taxonomía de estados.",
+    problem: `Las vacantes se mostraban de forma inconsistente entre las distintas secciones del sitio.\n\nEn /jobs-search/:\n\n- Se mezclaban vacantes Active y Placed.\n- Los filtros y peticiones AJAX no garantizaban resultados únicamente Active.\n- La cantidad de resultados por página era diferente entre la carga inicial y AJAX.\n\nEn /roles-we-recruit/:\n\n- No se mostraban vacantes.\n- Aparecía el mensaje “Job listings are unavailable”.\n- La sección todavía dependía de un custom post type y un shortcode antiguos.\n\nEl sistema vigente utilizaba el custom post type veblen_job y la taxonomía job_status, con los términos active y placed.`,
+    role: "Analicé las consultas PHP, los filtros, la paginación y el comportamiento de las peticiones AJAX.\n\nIdentifiqué la diferencia entre el sistema antiguo y el sistema vigente, y definí la estrategia técnica para que cada página consultara únicamente las vacantes correspondientes a su función.",
+    solution: `Para /jobs-search/, se definió:\n\n- Aplicar obligatoriamente el filtro job_status=active.\n- Mantener el mismo filtro en la consulta inicial, búsquedas, paginación y AJAX.\n- Unificar la cantidad de resultados por página.\n\nPara /roles-we-recruit/, se propuso:\n\n- Sustituir la consulta basada en el sistema antiguo.\n- Consultar el custom post type veblen_job.\n- Filtrar los resultados por job_status=placed.\n\nDe esta forma, cada sección mantendría una responsabilidad clara y un comportamiento consistente.`,
+    result:
+      "Se documentó una solución técnica para corregir la mezcla de estados en /jobs-search/, alinear la carga inicial con las peticiones AJAX y actualizar /roles-we-recruit/ para que utilizara el sistema vigente de vacantes.\n\nLa implementación final y su validación en producción quedaron fuera del alcance documentado de este caso.",
+    alt: "Página de búsqueda de vacantes del sitio web de Veblen",
+    coverImage: "/images/portfolio/case-studies/veblen-cover-1200x675.webp",
+    publicUrl: "https://veblen-int.com/",
+    technologies: [
+      "WordPress",
+      "PHP",
+      "JavaScript",
+      "AJAX",
+      "WP_Query",
+      "Custom Post Types",
+      "taxonomías",
+      "HTML",
+      "CSS",
+      "Git",
+    ],
+  },
+  {
+    id: 15,
+    company: "Offitravel",
+    stack: "WORDPRESS | WOOCOMMERCE | STRIPE | JAVASCRIPT",
+    img: "/images/portfolio/case-studies/offitravel-cover-1200x675.webp",
+    link: "https://www.offitravel.es/",
+    pageLink: "offitravel-checkout-dos-pasos",
+    description:
+      "Participé en la adaptación del checkout clásico de WooCommerce a un flujo de dos pasos y en la preparación de eventos de seguimiento asociados a cada etapa de la compra.",
+    type: "case-study",
+    featured: true,
+    title: "Checkout en dos pasos",
+    summary:
+      "Participé en la adaptación del checkout clásico de WooCommerce a un flujo de dos pasos y en la preparación de eventos de seguimiento asociados a cada etapa de la compra.",
+    context:
+      "Offitravel es un sitio WordPress con WooCommerce para una empresa de viajes y reservas, con pagos procesados mediante Stripe.",
+    problem: `El checkout requería dividirse en dos pasos para organizar mejor el proceso de compra y facilitar la medición del avance del usuario.\n\nEl flujo debía:\n\n- Separar los datos personales de la información de pago.\n- Mantener los datos ingresados al avanzar entre pasos.\n- Mostrar un resumen lateral del pedido.\n- Contemplar eventos de seguimiento para cada etapa del proceso.\n\nLos eventos previstos eran:\n\n- \`InitiateCheckout\` al comenzar el checkout.\n- \`AddPaymentInfo\` al avanzar al paso de pago.\n- \`Purchase\` después de completar correctamente la compra.`,
+    role: "Participé en la adaptación del checkout clásico dentro de un child theme.\n\nTrabajé en la estructura visual, la navegación entre pasos, el mantenimiento de los datos del formulario y la preparación de los eventos de seguimiento del embudo de compra.",
+    solution: `Se adaptó el checkout clásico de WooCommerce para presentarlo en dos pasos:\n\n1. Datos personales.\n2. Información y confirmación del pago.\n\nTambién se trabajó en:\n\n- Separar visualmente los bloques del checkout.\n- Añadir controles para avanzar y retroceder.\n- Mantener visible el resumen lateral del pedido.\n- Conservar la información introducida en el primer paso.\n- Preparar los eventos \`InitiateCheckout\`, \`AddPaymentInfo\` y \`Purchase\`.\n\nLa implementación se realizó mediante un child theme, plantillas, JavaScript y código personalizado, sin modificar directamente plugins de terceros.`,
+    result:
+      "El checkout quedó estructurado visualmente en dos pasos y se preparó la lógica de seguimiento para las distintas etapas del proceso de compra.\n\nLa validación completa de la persistencia de datos, el comportamiento final del checkout y todos los eventos requería pruebas adicionales.",
+    alt: "Checkout de Offitravel en WooCommerce con resumen del pedido y formulario de pago",
+    coverImage:
+      "/images/portfolio/case-studies/offitravel-cover-1200x675.webp",
+    publicUrl: "https://www.offitravel.es/",
+    technologies: [
+      "WordPress",
+      "WooCommerce",
+      "PHP",
+      "JavaScript",
+      "Stripe",
+      "HTML",
+      "CSS",
+      "Meta Pixel",
+      "Git",
+    ],
+  },
+  {
+    id: 16,
+    company: "Tokenovate",
+    stack: "WORDPRESS | PHP | REDIRECCIONES | BROWSERSTACK",
+    img: "/images/portfolio/case-studies/tokenovate-cover-1200x675.webp",
+    link: "https://www.tokenovate.com/",
+    pageLink: "tokenovate-rutas-navegacion-cta",
+    description:
+      "Configuré una redirección 301, unifiqué la terminología de navegación y corregí el destino del CTA de solicitud de demo para mantener la consistencia funcional y de contenido del sitio.",
+    type: "case-study",
+    featured: true,
+    title: "Actualizaciones web",
+    summary:
+      "Configuré una redirección 301, unifiqué la terminología de navegación y corregí el destino del CTA de solicitud de demo para mantener la consistencia funcional y de contenido del sitio.",
+    context:
+      "Tokenovate es un sitio corporativo en WordPress orientado a tecnología financiera y normalización de datos.",
+    problem:
+      "El sitio requería actualizar una ruta antigua, alinear textos visibles en el header y footer, y corregir el destino de una llamada a la acción.\n\nEsto generaba inconsistencias entre la URL disponible, la terminología utilizada en la navegación y el flujo hacia la página de solicitud de demo.",
+    role: "Realicé los ajustes en WordPress y validé que la redirección, los enlaces y los textos fueran consistentes entre las distintas áreas del sitio.\n\nTambién revisé el comportamiento en diferentes navegadores y resoluciones.",
+    solution: `Se configuró una redirección 301 desde:\n\n\`/use-cases/trade-data-normalisation/\`\n\nhacia:\n\n\`/use-cases/data-normalisation/\`\n\nAdemás:\n\n- Se actualizaron los textos del header y footer para utilizar **Data Normalisation**.\n- Se corrigió el enlace del CTA **Request a Demo** para dirigirlo a \`/book-a-demo/\`.\n- Se realizaron pruebas funcionales y visuales.\n- Se validó el comportamiento mediante BrowserStack.`,
+    result:
+      "La URL anterior quedó redirigida permanentemente hacia la nueva. La navegación pasó a utilizar una terminología consistente y el CTA **Request a Demo** quedó enlazado correctamente con la página de reserva de demo.",
+    alt: "Página de Tokenovate con navegación Data Normalisation y botón Request a Demo",
+    coverImage:
+      "/images/portfolio/case-studies/tokenovate-cover-1200x675.webp",
+    publicUrl: "https://www.tokenovate.com/",
+    technologies: [
+      "WordPress",
+      "PHP",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "redirecciones HTTP",
+      "BrowserStack",
+      "Git",
+    ],
+  },
+  {
     id: 0,
     company: "Tío Saji",
     stack: "SHOPIFY | LIQUID | HTML | CSS | JS",

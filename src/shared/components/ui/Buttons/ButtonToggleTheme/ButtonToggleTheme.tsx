@@ -8,6 +8,9 @@ interface IProps {
 }
 export const ButtonToggleTheme = ({ className = "" }: IProps) => {
   const { setTheme, resolvedTheme } = useTheme();
+  const nextTheme = resolvedTheme === "dark" ? "light" : "dark";
+  const themeLabel =
+    nextTheme === "dark" ? "Activar tema oscuro" : "Activar tema claro";
 
   const changedTheme = (): void =>
     setTheme(resolvedTheme === "dark" ? "light" : "dark");
@@ -20,7 +23,8 @@ export const ButtonToggleTheme = ({ className = "" }: IProps) => {
         className
       )}
       type="button"
-      title="Switch to dark theme"
+      title={themeLabel}
+      aria-label={themeLabel}
       onClick={changedTheme}
     >
       <span

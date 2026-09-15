@@ -33,4 +33,19 @@ export interface IDataProjects {
   link: string;
   pageLink?: string;
   description: string;
+  type?: "case-study" | "project";
+  featured?: boolean;
+  title?: string;
+  summary?: string;
+  context?: string;
+  problem?: string;
+  role?: string;
+  solution?: string;
+  result?: string;
+  alt?: string;
+  coverImage?: string;
+  heroImage?: string;
+  gallery?: string[];
+  publicUrl?: string;
+  technologies?: string[];
 }
